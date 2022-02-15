@@ -1,0 +1,4424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>Replace drive drawer in E2800 (60-drive shelf)</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Replace drive drawer in E2800 (60-drive shelf)" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html" />
+	<meta property="og:description" content="Replace a drive drawer in an E2860 controller shelf or a DE460C drive shelf." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/e-series/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="Replace a drive drawer in an E2860 controller shelf or a DE460C drive shelf.">
+  <meta name="keywords" content=" E2800 replace drive drawer, replacing E2800 drive drawer, E2800 replace drive drawer, replacing E2800 drive drawer, E2800, E-Series, eseries">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/e-series/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/e-series/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/e-series/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/e-series/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/e-series/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/e-series/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/e-series/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/e-series/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/e-series/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/e-series/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/e-series/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/e-series/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/e-series/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/us-en/e-series/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/us-en/e-series/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/us-en/e-series/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/us-en/e-series/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/e-series/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/e-series/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/e-series/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/e-series/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/e-series/js/na-utility.js'></script>
+  <script src='/us-en/e-series/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/e-series/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/e-series/js/toc.js'></script>
+  <script src='/us-en/e-series/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/us-en/e-series/js/version-dropdown.js'></script>
+  <script src='/us-en/e-series/js/product-family.js'></script>
+  <script src='/us-en/e-series/js/FileSaver.min.js'></script>
+  <script src='/us-en/e-series/js/jszip-utils.min.js'></script>
+  <script src='/us-en/e-series/js/jszip.min.js'></script>
+  <script src='/us-en/e-series/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/e-series/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/e-series/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/e-series/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/us-en/e-series/search.html"
+          data-type="widget" 
+          data-placeholder="Search Documentation" 
+          data-no-results-found="No results were found for {query}" 
+          data-did-you-mean="Search for {suggestion}." 
+          data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" 
+          data-results-found="{hitCount} results found"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">English</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/e-series/maintenance-e2800/drives-60-supertask-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/e-series/maintenance-e2800/drives-60-supertask-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/e-series/maintenance-e2800/drives-60-supertask-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>Available PDFs<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/us-en/e-series/pdfs/fullsite-sidebar/E_Series_and_SANtricity_documentation.pdf" >
+          <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Release_notes.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Release notes
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Get_started.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Get started
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Learn_about_E_Series_systems.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Learn about E-Series systems
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Install_hardware.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Install hardware
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_and_EF600.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            EF300 and EF600
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_and_E5700.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            E2800 and E5700
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Install_and_set_up_60_drives.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Install and set up 60-drives
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Install_and_set_up_12_and_24_drives.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Install and set up 12 and 24-drives
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/3040_40U_cabinet.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            3040 40U cabinet
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Cabling.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Cabling
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Deploy_software.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Deploy software
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Linux_express_configuration.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Linux express configuration
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Fibre_Channel_Express_Setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Fibre Channel Express Setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/SAS_Setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            SAS Setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/iSCSI_Setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            iSCSI Setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/iSER_over_InfiniBand_Setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            iSER over InfiniBand Setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/SRP_over_InfiniBand_Setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            SRP over InfiniBand Setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/NVMe_over_InfiniBand_Setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            NVMe over InfiniBand Setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/NVMe_over_RoCE_Setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            NVMe over RoCE Setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/NVMe_over_Fibre_Channel_setup.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            NVMe over Fibre Channel setup
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/VMware_express_configuration.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            VMware express configuration
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Windows_express_configuration.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Windows express configuration
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Upgrade_systems.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Upgrade systems
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Controller_Hardware_Upgrade.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Controllers
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/SANtricity_Software_Upgrade.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            SANtricity OS
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Maintain_systems.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Maintain systems
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_Systems.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            EF300 and EF600
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_Batteries.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Batteries
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_Controllers.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Controllers
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_DIMMs.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            DIMMs
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_Drives.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Drives
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_Fans.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Fans
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_HICs.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Host interface cards
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_Host_Port.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Host port protocol conversion
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/EF300_EF600_Maintain_Power_Supplies.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Power supplies
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/SAS_expansion_cards.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            SAS expansion cards
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_Maintain_System.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            E2800
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_Maintain_Batteries.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Batteries
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_Maintain_Controllers.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Controllers
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_Maintain_Canisters.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Canisters
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_Maintain_Drives.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Drives
+          </a>
+          
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/us-en/e-series/pdfs/pages/maintenance-e2800/drives-60-supertask-task.pdf" >
+    <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_Maintain_HICs.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Host interface cards
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E2800_Convert_Host_Protocol.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Host port protocol conversion
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E5700_Maintain_System.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            E5700
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E5700_Maintain_Batteries.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Batteries
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E5700_Maintain_Controllers.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Controllers
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E5700_Maintain_Canisters.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Canisters
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E5700_Maintain_Drives.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Drives
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E5700_Maintain_HICs.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Host interface cards
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/E5700_Change_Host_Protocol.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Host port protocol
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Use_SANtricity_solutions.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Use SANtricity solutions
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Web_services_proxy.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Web services proxy
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Learn_about_Web_Services.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Learn about Web Services
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Install_and_configure.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Install and configure
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Remote_volume_mirroring.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Remote volume mirroring
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Storage_plugin_for_vCenter.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Storage plugin for vCenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Legacy_solutions.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Legacy solutions
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Cloud_connector.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Cloud connector
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/us-en/e-series/pdfs/sidebar/Technical_reports.pdf" 
+            
+          >
+            <img src="/us-en/e-series/images/pdf.png" width="16" height="16"/>
+            Technical reports
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/us-en/e-series/images/pdf-zip.png" width="16" height="16"/>
+      <pre>Collection of separate PDF docs<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/index.html">
+        E-series docs
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Release notes</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/whats-new.html">
+        What's new
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/known-issues.html">
+        Release notes
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Get started</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/getting-started/index.html">
+        What's included in this site
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Learn about E-Series systems</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/getting-started/learn-terms-concept.html">
+        E-Series terminology
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/getting-started/learn-hardware-concept.html">
+        E-Series hardware overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/getting-started/learn-shelf-concept.html">
+        E-Series shelf types
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/getting-started/learn-software-concept.html">
+        SANtricity software overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/getting-started/learn-video-concept.html">
+        E-Series videos
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/getting-started/getup-run-concept.html">
+        Get up and running with E-Series
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Install hardware</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> EF300 and EF600</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-ef600/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-ef600/overview-concept.html">
+        Install process
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-ef600/prepare-for-install-task.html">
+        Prepare for install
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-ef600/install-hardware-task.html">
+        Install hardware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-ef600/power-controller-shelves-task.html">
+        Power on controller shelves
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-ef600/complete-setup-task.html">
+        Complete storage system setup
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> E2800 and E5700</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/install-setup-overview-concept.html">
+        Install process
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Install and set up 60-drives</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2860-e5760-prepare-task.html">
+        Prepare for install
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2860-e5760-install-hardware-task.html">
+        Install hardware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2860-e5760-connect-cables-task.html">
+        Cable shelves
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2860-e5760-complete-setup-task.html">
+        Complete storage system setup
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Install and set up 12 and 24-drives</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2824-e5724-prepare-task.html">
+        Prepare for install
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2824-e5724-install-hardware-task.html">
+        Install hardware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2824-e5724-connect-cables-task.html">
+        Connect cables
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-e2800-e5700/e2824-e5724-complete-setup-task.html">
+        Complete storage system setup
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 3040 40U cabinet</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabinet/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabinet/overview-cabinet-specs-concept.html">
+        Specifications
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabinet/cabinet-gather-tools-equipment-task.html">
+        Gather required tools and equipment
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabinet/prepare-move-cabinet-task.html">
+        Prepare to move cabinet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabinet/move-cabinet-task.html">
+        Move cabinet to permanent location
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabinet/complete-cabinet-install-task.html">
+        Complete cabinet installation
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/rackmount-hardware.html">
+        Rack-mount hardware
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cabling</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabling/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabling/cable-overview-requirements-concept.html">
+        Requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabling/host-cable-task.html">
+        Host cabling
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html">
+        Drive shelf cabling
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabling/power-cable-task.html">
+        Power cabling
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabling/hotadd-drive-shelf-task.html">
+        Hot add drive shelf
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/install-hw-cabling/ethernet-cable-task.html">
+        Ethernet cabling
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Deploy software</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Linux express configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/overview-concept.html">
+        Assumptions
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Fibre Channel Express Setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-install-configure-host-utilities-task.html">
+        Install and configure host utilities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-configure-multipath-software-task.html">
+        Configure multipath software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-setup-multipath-conf-file-concept.html">
+        Set up multipath.conf file
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-configure-switches-task.html">
+        Configure FC switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-determine-host-port-wwpns-task.html">
+        Determine host WWPNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-create-partition-file-task.html">
+        Create partitions and filesystems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-worksheet-concept.html">
+        FC worksheet for Linux
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAS Setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-install-configure-host-utilities-task.html">
+        Install and configure host utilities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-configure-multipath-software-task.html">
+        Configure multipath software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-setup-multipath-conf-file-concept.html">
+        Set up multipath.conf file
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-determine-sas-host-ids-task.html">
+        Determine SAS host identifiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-create-partitions-filesystems-task.html">
+        Create partitions and filesystems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/sas-worksheet-concept.html">
+        SAS worksheet for Linux
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> iSCSI Setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-install-configure-host-utilities-task.html">
+        Install and configure host utilities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-configure-multipath-software-task.html">
+        Configure multipath software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-setup-multipath-conf-file-concept.html">
+        Set up multipath.conf file
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-configure-switches-concept.html">
+        Configure switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-configure-network-concept.html">
+        Configure networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-configure-array-side-network-task.html">
+        Configure array-side networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-configure-host-side-network-task.html">
+        Configure host-side networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-verify-ip-network-connections-task.html">
+        Verify IP network connections
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-create-partition-file-task.html">
+        Create partitions and filesystems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iscsi-worksheet-concept.html">
+        iSCSI worksheet for Linux
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> iSER over InfiniBand Setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-configure-subnet-manager-task.html">
+        Configure subnet manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-install-configure-host-utilities-task.html">
+        Install and configure host utilities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-configure-multipath-software-task.html">
+        Configure multipath software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-setup-multipath-conf-file-concept.html">
+        Set up the multipath.conf file
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-configure-network-connections-task.html">
+        Configure network connections
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-configure-network-attached-hosts-task.html">
+        Configure networking
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-create-partition-files-task.html">
+        Create partitions and filesystems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-worksheet-concept.html">
+        iSER over InfiniBand worksheet
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SRP over InfiniBand Setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-configure-subnet-manager-task.html">
+        Configure subnet manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-install-configure-host-utilities-task.html">
+        Install and configure host utilities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-configure-multipath-software-task.html">
+        Configure multipath software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-setup-multipath-conf-file-concept.html">
+        Set up multipath.conf file
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-determine-host-port-guids-task.html">
+        Determine host port GUIDs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-configure-network-connections-task.html">
+        Configure network connections—​SRP over Infiniband
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-create-partitions-filesystems-task.html">
+        Create partitions and filesystems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-worksheet-concept.html">
+        SRP over Infiniband worksheet
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NVMe over InfiniBand Setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager for SMcli
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager and use the Setup wizard
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-configure-subnet-manager-task.html">
+        Configure subnet manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-setup-host-side-task.html">
+        Set up NVMe over InfiniBand on the host side
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-configure-storage-connections-task.html">
+        Configure storage array NVMe over InfiniBand connections
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-discover-connect-storage-host-task.html">
+        Discover and connect to the storage from the host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-define-host-task.html">
+        Define a host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/ib-assign-volume-nvme-task.html">
+        Assign a volume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-display-devices-visible-host-task.html">
+        Display the volumes visible to the host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-set-up-failover-task.html">
+        Set up failover
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-access-virtual-targets-concept.html">
+        Access NVMe volumes for virtual device targets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-access-physical-targets-concept.html">
+        Access NVMe volumes for physical device targets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-create-filesystems-sles-12-task.html">
+        Create filesystems (RHEL 7 and SLES 12)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-create-filesystems-sles-15-task.html">
+        Create filesystems (RHEL 8 and SLES 15)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-verify-storage-access-host-task.html">
+        Verify storage access on the host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-worksheet-concept.html">
+        NVMe over InfiniBand worksheet
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NVMe over RoCE Setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-configure-switch-task.html">
+        Configure switch
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-setup-host-side-task.html">
+        Set up NVMe over RoCE on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-configure-storage-connections-task.html">
+        Configure NVMe port settings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-discover-connect-storage-host-task.html">
+        Connect to storage from host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-define-host-task.html">
+        Define host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-assign-volume-task.html">
+        Assign volume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-display-volumes-visible-host-task.html">
+        Display volumes visible to host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-setup-failover-host-task.html">
+        Set up failover on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-access-virtual-targets-concept.html">
+        Access NVMe volumes for virtual device targets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-access-physical-targets-concept.html">
+        Access NVMe volumes for physical device targets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-create-filesystems-sles-12-task.html">
+        Create filesystems (RHEL 7 and SLES 12)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-create-filesystems-sles-15-task.html">
+        Create filesystems (RHEL 8 and SLES 15)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-worksheet-for-concept.html">
+        NVMe over RoCE worksheet for Linux
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NVMe over Fibre Channel setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-verify-linux-config-support-task.html">
+        Verify Linux configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-install-smcli-11-53-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-configure-fc-switches-task.html">
+        Configure FC switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-setup-host-side-task.html">
+        Set up NVMe over Fibre Channel on the host side
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-define-host-task.html">
+        Define host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/fc-assign-volume-nvme-task.html">
+        Assign volume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-display-volumes-visible-host-task.html">
+        Display the volumes visible to the host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-setup-failover-host-task.html">
+        Set up failover on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-access-virtual-targets-concept.html">
+        Access NVMe volumes for virtual device targets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-access-physical-targets-concept.html">
+        Access NVMe volumes for physical device targets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-create-partition-files-task.html">
+        Create partitions and filesystems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-worksheet-concept.html">
+        NVMe over Fibre Channel worksheet for Linux
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> VMware express configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/overview-concept.html">
+        Assumptions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/understand-vmware-workflow-concept.html">
+        Understand the workflow
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/verify-vmware-config-support-task.html">
+        Verify VMware configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/configure-ip-address-using-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/configure-multipath-software-concept.html">
+        Configure the multipath software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/fc-perform-specific-task.html">
+        Perform FC-specific tasks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/nmve-fc-perform-specific-task.html">
+        Perform NMVe over FC-specific tasks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/iscsi-perform-specific-task.html">
+        Perform iSCSI-specific tasks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/sas-perform-specific-task.html">
+        Perform SAS-specific tasks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/discover-storage-host-task.html">
+        Discover storage on the host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/configure-storage-host-task.html">
+        Configure storage on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-vmware/verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Windows express configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/overview-concept.html">
+        Assumptions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/understand-windows-concept.html">
+        Understand the workflow
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/verify-windows-config-support-task.html">
+        Verify Windows configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/configure-ip-address-dhcp-task.html">
+        Configure IP addresses using DHCP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/configure-multipath-software-task.html">
+        Configure multipath software
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/install-configure-host-utilities-task.html">
+        Install and configure Unified Host Utilities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/install-storage-manager-for-smcli-task.html">
+        Install SANtricity Storage Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/access-sam-setup-wizard-task.html">
+        Access SANtricity System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/fc-perform-specific-task.html">
+        Perform FC-specific tasks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/iscsi-perform-specific-task.html">
+        Perform iSCSI-specific tasks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/sas-perform-specific-task.html">
+        Perform SAS-specific tasks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/discover-storage-host-task.html">
+        Discover storage on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/configure-storage-host-task.html">
+        Configure storage on host
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/config-windows/verify-storage-access-host-task.html">
+        Verify storage access on host
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Upgrade systems</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Controllers</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/overview-requirements-concept.html">
+        Upgrade considerations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/prepare-upgrade-controllers-task.html">
+        Prepare to upgrade controllers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/remove-controllers-task.html">
+        Remove controllers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/install-controllers-task.html">
+        Install new controllers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html">
+        Unlock drives
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/complete-upgrade-controllers-task.html">
+        Complete controller upgrade
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/remount-volumes-lsi-task.html">
+        Remount volumes after changing the vendor from LSI to NETAPP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-controllers/reconfigure-sas-task.html">
+        Reconfigure SAS-2 system
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SANtricity OS</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-santricity/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-santricity/overview-upgrade-consider-task.html">
+        Upgrade considerations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-santricity/upgrade-single-controller-task.html">
+        Upgrade single controller
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-santricity/upgrade-multiple-controller-task.html">
+        Upgrade multiple controllers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/upgrade-santricity/upgrade-drive-firmware-task.html">
+        Upgrade drive firmware
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Maintain systems</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> EF300 and EF600</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/index.html">
+        Overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Batteries</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/batteries-overview-requirements-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/batteries-replace-supertask-task.html">
+        Replace battery
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Controllers</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/controllers-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/controllers-replace-supertask-task.html">
+        Replace controller
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> DIMMs</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/dimms-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/dimms-replace-supertask-task.html">
+        Replace DIMMs
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Drives</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/drives-replace-EF300-task.html">
+        Replace EF300 drive
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/drives-replace-supertask-task.html">
+        Replace EF600 drive
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Fans</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/fans-overview-requirements-replacing2-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/fans-replace-supertask-task.html">
+        Replace fan
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Host interface cards</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/hics-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/hics-add-supertask-task.html">
+        Add host interface cards
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/hics-upgrade-intro.html">
+        Upgrade host interface card
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/hics-replace-supertask-task.html">
+        Replace failed host interface card
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Host port protocol conversion</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/hpp-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/hpp-change-supertask-task.html">
+        Change host protocol
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/hpp-complete-protocol-conversion-task.html">
+        Complete host protocol conversion
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Power supplies</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/power-overview-requirements2-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/power-replace-supertask-task.html">
+        Replace power supply
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAS expansion cards</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/sas-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/sas-add-supertask-task.html">
+        Add SAS expansion cards
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> E2800</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/index.html">
+        Overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Batteries</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/batteries-overview-requirements-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/batteries-prepare-replace-task.html">
+        Prepare to replace battery
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/batteries-remove-controller-canister-task.html">
+        Remove controller canister
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/batteries-remove-failed-task.html">
+        Remove failed battery
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/batteries-install-new-task.html">
+        Install new battery
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/batteries-reinstall-controller-canister-task.html">
+        Re-install controller canister
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/batteries-complete-replacement-task.html">
+        Complete battery replacement
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Controllers</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/controllers-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/controllers-second-add-task.html">
+        Add second controller canister
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/controllers-duplex-supertask-task.html">
+        Replace controller in duplex configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/controllers-simplex-supertask-task.html">
+        Replace controller in simplex configuration
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Canisters</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/canisters-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/canisters-supply-supertask-task.html">
+        Replace power supply (12-drive or 24-drive)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/canisters-60-replace-power-task.html">
+        Replace power canister (60-drive)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html">
+        Replace fan canister (60-drive)
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Drives</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/drives-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html">
+        Replace drive (12-drive or 24-drive)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/drives-60-replace-task.html">
+        Replace drive (60-drive)
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html">
+        Replace drive drawer (60-drive)
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Host interface cards</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/hics-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/hics-add-supertask-task.html">
+        Add host interface cards
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/hics-upgrade-supertask-task.html">
+        Upgrade host interface card
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/hics-replace-supertask-task.html">
+        Replace host interface card
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Host port protocol conversion</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/hpp-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/hpp-change-host-protocol-task.html">
+        Change host protocol
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e2800/hpp-complete-protocol-conversion-task.html">
+        Complete host protocol conversion
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> E5700</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/index.html">
+        Overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Batteries</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/batteries-intro-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/batteries-replace-supertask-task.html">
+        Replace battery
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Controllers</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/controllers-overview-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/controllers-duplex-supertask-task.html">
+        Replace controller in duplex configuration
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Canisters</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/canisters-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/canisters-supply-replace-task.html">
+        Replace power supply (24-drive)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/canisters-power-supertask-task.html">
+        Replace power canister (60-drive)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/canisters-fan-replace-task.html">
+        Replace fan canister (60-drive)
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Drives</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/drives-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/drives-24-supertask-task.html">
+        Replace drive (24-drive)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/drives-60-replace-task.html">
+        Replace drive (60-drive)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/drives-drawer-supertask-task.html">
+        Replace drive drawer (60-drive)
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Host interface cards</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/hics-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/hics-add-supertask-task.html">
+        Add host interface cards
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/hics-upgrade-supertask-task.html">
+        Upgrade host interface card
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/hics-replace-supertask-task.html">
+        Replace host interface card
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Host port protocol</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/hpp-overview-supertask-concept.html">
+        Overview and requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/hpp-change-host-protocol-task.html">
+        Change host protocol
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/maintenance-e5700/hpp-complete-protocol-conversion-task.html">
+        Complete host protocol conversion
+      </a></li></ul></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/manage-storage.html">
+        Manage storage
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Use SANtricity solutions</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Web services proxy</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/index.html">
+        Overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Learn about Web Services</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/overview-intro-concept.html">
+        Web Services API overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/overview-compat-concept.html">
+        Compatibility and restrictions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/overview-api-concept.html">
+        API basics
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/overview-terms-concept.html">
+        Terms and concepts
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Install and configure</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/install-reqs-task.html">
+        Review requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/install-wsp-task.html">
+        Install Web Services Proxy
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/install-login-task.html">
+        Log in to API and Unified Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/install-config-task.html">
+        Configure Web Services Proxy
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/install-uninstall-task.html">
+        Uninstall Web Services Proxy
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/access-intro-concept.html">
+        Manage user access
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/certificates-intro-concept.html">
+        Manage security and certificates
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/array-intro-concept.html">
+        Manage storage systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/polling-intro-concept.html">
+        Manage automatic polling
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/web-services-proxy/asup-intro-concept.html">
+        Manage AutoSupport
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Remote volume mirroring</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/remote-storage-volumes/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/remote-storage-volumes/system-reqs-concept.html">
+        Requirements and restrictions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/remote-storage-volumes/setup-remote-volumes-concept.html">
+        Configure hardware
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/remote-storage-volumes/import-remote-storage-task.html">
+        Import remote storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/remote-storage-volumes/view-import-progress-task.html">
+        Manage import progress
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/remote-storage-volumes/modify-remote-storage-task.html">
+        Modify connection settings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/remote-storage-volumes/remove-remote-storage-task.html">
+        Remove remote storage object
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Storage plugin for vCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-installation.html">
+        Install the plugin
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-user-access.html">
+        Configure access permissions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-login-and-navigation.html">
+        Log in and navigate
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-storage-array-discovery.html">
+        Discover storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-storage-provisioning.html">
+        Provision storage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-plugin-removal.html">
+        Remove plugin
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Legacy solutions</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cloud connector</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/index.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/learn-intro-concept.html">
+        Requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/install-intro-concept.html">
+        Install Cloud Connector
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/config-intro-concept.html">
+        Configure Cloud Connector for first time
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/login-task.html">
+        Log into Cloud Connector
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/backup-intro-concept.html">
+        Backups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/restore-intro-concept.html">
+        Restores
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/modify-intro-concept.html">
+        Modify settings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/cloud-connector/uninstall-intro-concept.html">
+        Uninstall Cloud Connector
+      </a></li></ul></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/early-versions.html">
+        Earlier versions
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Technical reports</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/platform-tech-reports.html">
+        Platform TRs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/security-tech-reports.html">
+        Security TRs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/feature-tech-reports.html">
+        Feature TRs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/solution-tech-reports.html">
+        Solution TRs
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/legal-notices.html">
+        Legal notices
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/e-series/">E-Series</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Replace drive drawer in E2800 (60-drive shelf)
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Replace drive drawer in E2800 (60-drive shelf)</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-11-12 20:04:24 +0000">11/12/2021</time>
+    
+  
+
+<span>Contributors
+  <a target="_blank" href="https://github.com/netapp-jolieg">
+    <img  class="avatar avatar-small"
+          alt="netapp-jolieg"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/78750754?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-jsnyder">
+    <img  class="avatar avatar-small"
+          alt="netapp-jsnyder"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/69054128?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/NetAppZacharyWambold">
+    <img  class="avatar avatar-small"
+          alt="NetAppZacharyWambold"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/73244192?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>You can replace a drive drawer in an E2860 controller shelf or a DE460C drive shelf.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>The steps to replace a failed drive drawer in an E2860 controller shelf or a DE460C drive shelf depend on whether the volumes in the drawer are protected by Drawer Loss Protection. If all volumes in the drive drawer are in disk pools or volume groups that have Drawer Loss Protection, you can perform this procedure online. Otherwise, you must stop all host I/O activity and power off the shelf before replacing the drive drawer.</p>
+</div>
+<div class="ulist">
+<div class="title">Before you begin</div>
+<ul>
+<li>
+<p>Review the drive drawer requirements in <a href="drives-overview-supertask-concept.html">Requirements for E2800 drive replacement</a>.</p>
+</li>
+<li>
+<p>Make sure the drive shelf meets all of these conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The drive shelf cannot be over temperature.</p>
+</li>
+<li>
+<p>Both fans must be installed and have a status of Optimal.</p>
+</li>
+<li>
+<p>All drive shelf components must be in place.</p>
+</li>
+<li>
+<p>The volumes in the drive drawer cannot be in a Degraded state.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible loss of data access</strong>&#8201;&#8212;&#8201;If a volume is already in a Degraded state, and you remove drives from the drive drawer, the volume can fail.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">What you&#8217;ll need</div>
+<ul>
+<li>
+<p>A replacement drive drawer.</p>
+</li>
+<li>
+<p>An ESD wristband, or you have taken other antistatic precautions.</p>
+</li>
+<li>
+<p>A flashlight.</p>
+</li>
+<li>
+<p>A permanent marker to note the exact location of each drive as you remove the drive from the drawer.</p>
+</li>
+<li>
+<p>Access to the storage array&#8217;s command line interface (CLI). If you do not have access to the CLI, you can do one of the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>For SANtricity System Manager (version 11.60 and above)</strong>&#8201;&#8212;&#8201;Download the CLI package (zip file) from System Manager. Go to <span class="menuseq"><b class="menu">Settings</b>&#160;<b class="caret">&#8250;</b> <b class="submenu">System</b>&#160;<b class="caret">&#8250;</b> <b class="submenu">Add-ons</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Command Line Interface</b></span>. You can then issue CLI commands from an operating system prompt, such as the DOS C: prompt.</p>
+</li>
+<li>
+<p><strong>For SANtricity Storage Manager/Enterprise Management Window (EMW)</strong>&#8201;&#8212;&#8201;Follow the instructions in the express guide to download and install the software. You can run CLI commands from the EMW by selecting <span class="menuseq"><b class="menu">Tools</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Execute Script</b></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="step-1-prepare-to-replace-drive-drawer">Step 1: Prepare to replace drive drawer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Determine if you can perform the replacement procedure while the drive shelf is online or if you need to stop host I/O activity and power off any of the shelves that are powered on.</p>
+</div>
+<div class="paragraph">
+<p>If you are replacing a drawer in a shelf with Drawer Loss Protection, there is no need to stop host I/O activity and power off any of the shelves.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Determine if the drive shelf is powered on.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the power is off, you do not need to issue the CLI command. Go to <a href="#step-2-remove-cable-chains">Step 2: Remove cable chains</a>.</p>
+</li>
+<li>
+<p>If the power is on, go to the next step.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Access the CLI, and then enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre>SMcli &lt;ctlr_IP1\&gt; -p "array_password" -c "set tray [trayID] drawer [drawerID]
+serviceAllowedIndicator=on;"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;ctlr_IP1&gt;</code> is the identifier of the controller.</p>
+</li>
+<li>
+<p><code>array_password</code> is the password for the storage array. You must enclose the value for <code>array_password</code> in double quotation marks ("").</p>
+</li>
+<li>
+<p><code>[trayID]</code> is the identifier of the drive shelf that contains the drive drawer that you want to replace. Drive shelf ID values are 0 to 99. You must enclose the value for <code>trayID</code> in square brackets.</p>
+</li>
+<li>
+<p><code>[drawerID]</code> is the identifier of the drive drawer that you want to replace. Drawer ID values are 1 (top drawer) to 5 (bottom drawer). You must enclose the value for <code>drawerID</code> in square brackets.</p>
+<div class="paragraph">
+<p>This command ensures you can remove the top-most drawer in drive shelf 10:</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>SMcli &lt;ctlr_IP1\&gt; -p "safety-1" -c "set tray [10] drawer [1]
+serviceAllowedIndicator=forceOnWarning;"</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Determine if you need to stop host I/O activity, as follows:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the command succeeds, you do not need to stop host I/O activity. All drives in the drawer are in pools or volume groups with Drawer Loss Protection. Go to <a href="#step-2-remove-cable-chains">Step 2: Remove cable chains</a>.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible damage to drives</strong>&#8201;&#8212;&#8201;Wait 30 seconds after the command completes before you open the drive drawer. Waiting 30 seconds allows the drives to spin down, which prevents possible damage to the hardware.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>If a warning is displayed indicating that this command could not be completed, you must stop host I/O activity before removing the drawer. The warning is displayed because one or more drives in the affected drawer are in pools or volume groups without Drawer Loss Protection. To avoid losing data, you must complete the next steps to stop host I/O activity and to power off the drive shelf and the controller shelf.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ensure that no I/O operations are occurring between the storage array and all connected hosts. For example, you can perform these steps:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Stop all processes that involve the LUNs mapped from the storage to the hosts.</p>
+</li>
+<li>
+<p>Ensure that no applications are writing data to any LUNs mapped from the storage to the hosts.</p>
+</li>
+<li>
+<p>Unmount all file systems associated with volumes on the array.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+The exact steps to stop host I/O operations depend on the host operating system and the configuration, which are beyond the scope of these instructions. If you are not sure how to stop host I/O operations in your environment, consider shutting down the host.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If the storage array participates in a mirroring relationship, stop all host I/O operations on the secondary storage array.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible data loss</strong>&#8201;&#8212;&#8201;If you continue this procedure while I/O operations are occurring, the host application might lose data because the storage array will not be accessible.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Wait for any data in cache memory to be written to the drives.</p>
+<div class="paragraph">
+<p>The green Cache Active LED on the back of each controller is on when cached data needs to be written to the drives. You must wait for this LED to turn off.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/28_dwg_2800_controller_attn_led_maint-e2800.gif" alt="28 dwg 2800 controller attn led maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Cache Active LED</em></p>
+</div>
+</li>
+<li>
+<p>From the Home page of SANtricity System Manager, select <strong>View Operations in Progress</strong>.</p>
+</li>
+<li>
+<p>Wait for all operations to complete before continuing with the next step.</p>
+</li>
+<li>
+<p>Power off the shelves, using one of the following procedures:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>If you are replacing a drawer in a shelf <strong>with</strong> Drawer Loss Protection</em>: There is NO need to power off any of the shelves. You can perform the replace procedure while the drive drawer is online, because the Set Drawer Service Action Allowed Indicator CLI command completed successfully.</p>
+</li>
+<li>
+<p><em>If you are replacing a drawer in a <strong>controller</strong> shelf <strong>without</strong> Drawer Loss Protection</em>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Turn off both power switches on the controller shelf.</p>
+</li>
+<li>
+<p>Wait for all LEDs on the controller shelf to go dark.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><em>If you are replacing a drawer in an <strong>expansion</strong> drive shelf <strong>without</strong> Drawer Loss Protection</em>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Turn off both power switches on the controller shelf.</p>
+</li>
+<li>
+<p>Wait for all LEDs on the controller shelf to go dark.</p>
+</li>
+<li>
+<p>Turn off both power switches on the drive shelf.</p>
+</li>
+<li>
+<p>Wait two minutes for drive activity to stop.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="step-2-remove-cable-chains">Step 2: Remove cable chains</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Remove both cable chains so you can remove and replace a failed drive drawer.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>Each drive drawer has left and right cable chains. The left and right cable chains allow the drawers to slide in and out.</p>
+</div>
+<div class="paragraph">
+<p>The metal ends on the cable chains slide into corresponding vertical and horizontal guide rails inside the enclosure, as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The left and right vertical guide rails connect the cable chain to the enclosure&#8217;s midplane.</p>
+</li>
+<li>
+<p>The left and right horizontal guide rails connect the cable chain to the individual drawer.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible hardware damage</strong>&#8201;&#8212;&#8201;If the drive tray is powered on, the cable chain is energized until both ends are unplugged. To avoid shorting out the equipment, do not allow the unplugged cable chain connector to touch the metal chassis if the other end of the cable chain is still plugged in.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Make sure that the drive shelf and controller shelf no longer has I/O activity and is powered off, or you have issued the <code>Set Drawer Attention Indicator</code> CLI command.</p>
+</li>
+<li>
+<p>From the rear of the drive shelf, remove the right fan canister:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Press the orange tab to release the fan canister handle.</p>
+<div class="paragraph">
+<p>The figure shows the handle for the fan canister extended and released from the orange tab on the left.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif" alt="28 dwg e2860 de460c fan canister handle with callout maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Fan canister handle</em></p>
+</div>
+</li>
+<li>
+<p>Using the handle, pull the fan canister out of the drive tray, and set it aside.</p>
+</li>
+<li>
+<p>If the tray is powered on, ensure that the left fan goes to its maximum speed.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible equipment damage due to overheating</strong>&#8201;&#8212;&#8201;If the tray is powered on, do not remove both fans at the same time. Otherwise, the equipment might overheat.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Determine which cable chain to disconnect:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the power is on, the amber Attention LED on the front of the drawer indicates the cable chain you need to disconnect.</p>
+</li>
+<li>
+<p>If the power is off, you must manually determine which of the five cable chains to disconnect.
+The figure shows the right side of the drive shelf with the fan canister removed. With the fan canister removed, you can see the five cable chains and the vertical and horizontal connectors for each drawer.</p>
+<div class="paragraph">
+<p>The top cable chain is attached to drive drawer 1. The bottom cable chain is attached to drive drawer 5. The callouts for drive drawer 1 are provided.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/trafford_cable_rail_1_maint-e2800.gif" alt="trafford cable rail 1 maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Cable chain</em></p>
+</div>
+<div class="paragraph">
+<p><strong>(2)</strong> <em>Vertical connector (connected to midplane)</em></p>
+</div>
+<div class="paragraph">
+<p><strong>(3)</strong> <em>Horizontal connector (connected to drawer)</em></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>For easy access, use your finger to move the cable chain on the right side to the left.</p>
+</li>
+<li>
+<p>Disconnect any of the right cable chains from their corresponding vertical guide rail.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Using a flashlight, locate the orange ring on the end of the cable chain that is connected to the vertical guide rail in the enclosure.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/trafford_cable_rail_3_maint-e2800.gif" alt="trafford cable rail 3 maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Orange ring on vertical guide rail</em></p>
+</div>
+<div class="paragraph">
+<p><strong>(2)</strong> <em>Cable chain, partially removed</em></p>
+</div>
+</li>
+<li>
+<p>To unlatch the cable chain, insert your finger into the orange ring and press towards the middle of the system.</p>
+</li>
+<li>
+<p>To unplug the cable chain, carefully pull your finger toward you approximately 1 inch (2.5 cm). Leave the cable chain connector within the vertical guide rail. (If the drive tray is powered on, do not allow the cable chain connector to touch the metal chassis.)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Disconnect the other end of the cable chain:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Using a flashlight, locate the orange ring on the end of the cable chain that is attached to the horizontal guide rail in the enclosure.</p>
+<div class="paragraph">
+<p>The figure shows the horizontal connector on the right and the cable chain disconnected and partially pulled out on the left side.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/trafford_cable_rail_2_maint-e2800.gif" alt="trafford cable rail 2 maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Orange ring on horizontal guide rail</em></p>
+</div>
+<div class="paragraph">
+<p><strong>(2)</strong> <em>Cable chain, partially removed</em></p>
+</div>
+</li>
+<li>
+<p>To unlatch the cable chain, gently insert your finger into the orange ring and push down.</p>
+<div class="paragraph">
+<p>The figure shows the orange ring on the horizontal guide rail (see item 1 in the figure above), as it is pushed down so that the rest of the cable chain can be pulled out of the enclosure.</p>
+</div>
+</li>
+<li>
+<p>Pull your finger toward you to unplug the cable chain.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Carefully pull the entire cable chain out of the drive shelf.</p>
+</li>
+<li>
+<p>Replace the right fan canister:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Slide the fan canister all the way into the shelf.</p>
+</li>
+<li>
+<p>Move the fan canister handle until it latches with the orange tab.</p>
+</li>
+<li>
+<p>If the drive shelf is receiving power, confirm that the amber Attention LED on the back of the fan is not illuminated and that air is coming out the back of the fan.</p>
+<div class="paragraph">
+<p>The LED could remain on for as long as a minute after you reinstall the fan while both fans settle into the correct speed.</p>
+</div>
+<div class="paragraph">
+<p>If the power is off, the fans do not run and the LED is not on.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>From the back of the drive shelf, remove the left fan canister.</p>
+</li>
+<li>
+<p>If the drive shelf is receiving power, ensure that the right fan goes to its maximum speed.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible equipment damage due to overheating</strong>&#8201;&#8212;&#8201;If the shelf is powered on, do not remove both fans at the same time. Otherwise, the equipment might overheat.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Disconnect the left cable chain from its vertical guide rail:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Using a flashlight, locate the orange ring on the end of the cable chain attached to the vertical guide rail.</p>
+</li>
+<li>
+<p>To unlatch the cable chain, insert your finger into the orange ring.</p>
+</li>
+<li>
+<p>To unplug the cable chain, pull toward you approximately 1 inch (2.5 cm). Leave the cable chain connector within the vertical guide rail.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible hardware damage</strong>&#8201;&#8212;&#8201;If the drive tray is powered on, the cable chain is energized until both ends are unplugged. To avoid shorting out the equipment, do not allow the unplugged cable chain connector to touch the metal chassis if the other end of the cable chain is still plugged in.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Disconnect the left cable chain from the horizontal guide rail, and pull the entire cable chain out of the drive shelf.</p>
+<div class="paragraph">
+<p>If you are performing this procedure with the power on, all LEDs turn off when you disconnect the last cable chain connector, including the amber Attention LED.</p>
+</div>
+</li>
+<li>
+<p>Replace the left fan canister. If the drive shelf is receiving power, confirm that the amber LED on the back of the fan is not illuminated and that air is coming out the back of the fan.</p>
+<div class="paragraph">
+<p>The LED could remain on for as long as a minute after you reinstall the fan while both fans settle into the correct speed.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="step-3-remove-failed-drive-drawer">Step 3: Remove failed drive drawer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Remove a failed drive drawer to replace it with a new one.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible loss of data access</strong>&#8201;&#8212;&#8201;Magnetic fields can destroy all data on the drive and cause irreparable damage to the drive circuitry. To avoid loss of data access and damage to the drives, always keep drives away from magnetic devices.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Make sure that:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The right and left cable chains are disconnected.</p>
+</li>
+<li>
+<p>The right and left fan canisters are replaced.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remove the bezel from the front of the drive shelf.</p>
+</li>
+<li>
+<p>Unlatch the drive drawer by pulling out on both levers.</p>
+</li>
+<li>
+<p>Using the extended levers, carefully pull the drive drawer out until it stops. Do not completely remove the drive drawer from the drive shelf.</p>
+</li>
+<li>
+<p>If volumes have already been created and assigned, use a permanent marker to note the exact location of each drive. For example, using the following drawing as a reference, write the appropriate slot number on the top of each drive.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif" alt="dwg trafford drawer with hdds callouts maint e2800">
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible loss of data access</strong>&#8201;&#8212;&#8201;Make sure to record the exact location of each drive before removing it.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Remove the drives from the drive drawer:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Gently pull back the orange release latch that is visible on the center front of each drive.</p>
+</li>
+<li>
+<p>Raise the drive handle to vertical.</p>
+</li>
+<li>
+<p>Use the handle to lift the drive from the drive drawer.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif" alt="92 dwg de6600 install or remove drive maint e2800">
+</div>
+</div>
+</li>
+<li>
+<p>Place the drive on a flat, static-free surface and away from magnetic devices.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Remove the drive drawer:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Locate the plastic release lever on each side of the drive drawer.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif" alt="92 pht de6600 drive drawer release lever maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Drive drawer release lever</em></p>
+</div>
+</li>
+<li>
+<p>Disengage both release levers by pulling the latches toward you.</p>
+</li>
+<li>
+<p>While holding both release levers, pull the drive drawer toward you.</p>
+</li>
+<li>
+<p>Remove the drive drawer from the drive shelf.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="step-4-install-new-drive-drawer">Step 4: Install new drive drawer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Install a new drive drawer to replace the failed one.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the front of the drive shelf, shine a flashlight into the empty drawer slot, and locate the lock-out tumbler for that slot.</p>
+<div class="paragraph">
+<p>The lock-out tumbler assembly is a safety feature that prevents you from being able to open more than one drive drawer at one time.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif" alt="92 pht de6600 lock out tumbler detail maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Lock-out tumbler</em></p>
+</div>
+<div class="paragraph">
+<p><strong>(2)</strong> <em>Drawer guide</em></p>
+</div>
+</li>
+<li>
+<p>Position the replacement drive drawer in front of the empty slot and slightly to the right of center.</p>
+<div class="paragraph">
+<p>Positioning the drawer slightly to the right of center helps to ensure that the lock-out tumbler and the drawer guide are correctly engaged.</p>
+</div>
+</li>
+<li>
+<p>Slide the drive drawer into the slot, and ensure that the drawer guide slides under the lock-out tumbler.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Risk of equipment damage</strong>&#8201;&#8212;&#8201;Damage occurs if the drawer guide does not slide under the lock-out tumbler.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Carefully push the drive drawer all the way in until the latch fully engages.</p>
+<div class="paragraph">
+<p>Experiencing a higher level of resistance is normal when pushing the drawer closed for the first time.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Risk of equipment damage</strong>&#8201;&#8212;&#8201;Stop pushing the drive drawer if you feel binding. Use the release levers at the front of the drawer to slide the drawer back out. Then, reinsert the drawer into the slot, ensure the tumbler is above the rail, and the rails are aligned correctly.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="step-5-attach-cable-chains">Step 5: Attach cable chains</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Attach the cable chains so you can safely re-install the drives in the drive drawer.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>When attaching a cable chain, reverse the order you used when disconnecting the cable chain. You must insert the chain&#8217;s horizontal connector into the horizontal guide rail in the enclosure before inserting the chain&#8217;s vertical connector into the vertical guide rail in the enclosure.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Make sure that:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A new drive drawer installed.</p>
+</li>
+<li>
+<p>You have two replacement cable chains, marked as LEFT and RIGHT (on the horizontal connector next to the drive drawer).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>From the back of the drive shelf, remove the fan canister on the right side, and set it aside.</p>
+</li>
+<li>
+<p>If the shelf is powered on, ensure that the left fan goes to its maximum speed.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible equipment damage due to overheating</strong>&#8201;&#8212;&#8201;If the shelf is powered on, do not remove both fans at the same time. Otherwise, the equipment might overheat.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Attach the right cable chain:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Locate the horizontal and vertical connectors on the right cable chain and the corresponding horizontal guide rail and vertical guide rail inside the enclosure.</p>
+</li>
+<li>
+<p>Align both cable chain connectors with their corresponding guide rails.</p>
+</li>
+<li>
+<p>Slide the cable chain&#8217;s horizontal connector onto the horizontal guide rail, and push it in as far as it can go.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Risk of equipment malfunction</strong>&#8201;&#8212;&#8201;Make sure to slide the connector into the guide rail. If the connector rests on the top of the guide rail, problems might occur when the system runs.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The figure shows the horizontal and vertical guide rails for the second drive drawer in the enclosure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/2860_dwg_both_guide_rails_maint-e2800.gif" alt="2860 dwg both guide rails maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Horizontal guide rail</em></p>
+</div>
+<div class="paragraph">
+<p><strong>(2)</strong> <em>Vertical guide rail</em></p>
+</div>
+</li>
+<li>
+<p>Slide the vertical connector on the right cable chain into the vertical guide rail.</p>
+</li>
+<li>
+<p>After you have reconnected both ends of the cable chain, carefully pull on the cable chain to verify that both connectors are latched.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Risk of equipment malfunction</strong>&#8201;&#8212;&#8201;If the connectors are not latched, the cable chain might come loose during drawer operation.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Reinstall the right fan canister. If the drive shelf is receiving power, confirm that the amber LED on the back of the fan is now off and that air is now coming out of the back.</p>
+<div class="paragraph">
+<p>The LED could remain on for as long as a minute after you reinstall the fan while the fan settles into the correct speed.</p>
+</div>
+</li>
+<li>
+<p>From the back of the drive shelf, remove the fan canister on the left side of the shelf.</p>
+</li>
+<li>
+<p>If the shelf is powered on, ensure that the right fan goes to its maximum speed.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible equipment damage due to overheating</strong>&#8201;&#8212;&#8201;If the shelf is powered on, do not remove both fans at the same time. Otherwise, the equipment might overheat.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Reattach the left cable chain:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Locate the horizontal and vertical connectors on the cable chain and their corresponding horizontal and vertical guide rails inside the enclosure.</p>
+</li>
+<li>
+<p>Align both cable chain connectors with their corresponding guide rails.</p>
+</li>
+<li>
+<p>Slide the cable chain&#8217;s horizontal connector into the horizontal guide rail and push it in as far as it will go.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Risk of equipment malfunction</strong>&#8201;&#8212;&#8201;Make sure to slide the connector within the guide rail. If the connector rests on the top of the guide rail, problems might occur when the system runs.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Slide the vertical connector on the left cable chain into the vertical guide rail.</p>
+</li>
+<li>
+<p>After you reconnect both ends of the cable chain, carefully pull on the cable chain to verify that both connectors are latched.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Risk of equipment malfunction</strong>&#8201;&#8212;&#8201;If the connectors are not latched, the cable chain might come loose during drawer operation.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Reinstall the left fan canister. If the drive shelf is receiving power, confirm that the amber LED on the back of the fan is now off and that air is now coming out of the back.</p>
+<div class="paragraph">
+<p>The LED could remain on for as long as a minute after you reinstall the fan while both fans settle into the correct speed.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="step-6-complete-drive-drawer-replacement">Step 6: Complete drive drawer replacement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Reinsert the drives and replace the front bezel in the correct order.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible loss of data access</strong>&#8201;&#8212;&#8201;You must install each drive in its original location in the drive drawer.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Make sure that:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You know where to install each drive.</p>
+</li>
+<li>
+<p>You have replaced the drive drawer.</p>
+</li>
+<li>
+<p>You have installed the new drawer cables.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Reinstall the drives in the drive drawer:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Unlatch the drive drawer by pulling out on both levers at the front of the drawer.</p>
+</li>
+<li>
+<p>Using the extended levers, carefully pull the drive drawer out until it stops. Do not completely remove the drive drawer from the drive shelf.</p>
+</li>
+<li>
+<p>Determine which drive to install in each slot by using the notes you made when removing the drives.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif" alt="dwg trafford drawer with hdds callouts maint e2800">
+</div>
+</div>
+</li>
+<li>
+<p>Raise the handle on the drive to vertical.</p>
+</li>
+<li>
+<p>Align the two raised buttons on each side of the drive with the notches on the drawer.</p>
+<div class="paragraph">
+<p>The figure shows the right side view of a drive, showing the location of the raised buttons.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif" alt="28 dwg e2860 de460c drive cru maint e2800">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Raised button on the right side of the drive</em></p>
+</div>
+</li>
+<li>
+<p>Lower the drive straight down, making sure the drive is pressed all the way down into the bay, and then rotate the drive handle down until the drive snaps into place.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif" alt="92 dwg de6600 install or remove drive maint e2800">
+</div>
+</div>
+</li>
+<li>
+<p>Repeat these steps to install all the drives.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Slide the drawer back into the drive shelf by pushing it from the center and closing both levers.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Risk of equipment malfunction</strong>&#8201;&#8212;&#8201;Make sure to completely close the drive drawer by pushing both levers. You must completely close the drive drawer to allow proper airflow and prevent overheating.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Attach the bezel to the front of the drive shelf.</p>
+</li>
+<li>
+<p>If you have powered down one or more shelves, reapply power using one of the following procedures:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>If you replaced a drive drawer in a <strong>controller</strong> shelf without Drawer Loss Protection</em>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Turn on both power switches on the controller shelf.</p>
+</li>
+<li>
+<p>Wait 10 minutes for the power-on process to complete.
+Confirm that both fans come on and that the amber LED on the back of the fans is off.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><em>If you replaced a drive drawer in an <strong>expansion</strong> drive shelf without Drawer Loss Protection</em>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Turn on both power switches on the drive shelf.</p>
+</li>
+<li>
+<p>Confirm that both fans come on and that the amber LED on the back of the fans is off.</p>
+</li>
+<li>
+<p>Wait two minutes before applying power to the controller shelf.</p>
+</li>
+<li>
+<p>Turn on both power switches on the controller shelf.</p>
+</li>
+<li>
+<p>Wait 10 minutes for the power-on process to complete.
+Confirm that both fans come on and that the amber LED on the back of the fans is off.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">What&#8217;s next?</div>
+<p>Your drive drawer replacement is complete. You can resume normal operations.</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/e-series/issues/new?body=Page%3A%20[Replace drive drawer in E2800 (60-drive shelf)](https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/discuss-sm.svg" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/e-series/blob/main/maintenance-e2800/drives-60-supertask-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/edit-sm.svg" class="github-icon" />Edit this page</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/e-series/images/article-sm.svg" class="github-icon" />Learn how to contribute</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/e-series/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/e-series/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/e-series/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/e-series/js/www-ntap.js'></script>
+    <script src='/us-en/e-series/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
