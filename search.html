@@ -50,10 +50,10 @@
   
   <link rel="stylesheet" href="/us-en/e-series/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/us-en/e-series/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/us-en/e-series/css/product-family.css' type="text/css">
   <link rel='stylesheet' href='/us-en/e-series/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><link rel='stylesheet' href='/us-en/e-series/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/us-en/e-series/css/prism-netapp.css' type='text/css'>
 
@@ -131,7 +131,6 @@
   }
   </script>
   <script src='/us-en/e-series/js/version-dropdown.js'></script>
-  <script src='/us-en/e-series/js/product-family.js'></script>
   <script src='/us-en/e-series/js/FileSaver.min.js'></script>
   <script src='/us-en/e-series/js/jszip-utils.min.js'></script>
   <script src='/us-en/e-series/js/jszip.min.js'></script>
@@ -144,6 +143,7 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -3016,19 +3016,19 @@
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Storage plugin for vCenter</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-overview.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/vcenter-plugin/san-spvc-ic-overview.html">
         Overview
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-installation.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/vcenter-plugin/san-spvc-ic-installation.html">
         Install the plugin
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-user-access.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/vcenter-plugin/san-spvc-ic-user-access.html">
         Configure access permissions
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-login-and-navigation.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/vcenter-plugin/san-spvc-ic-login-and-navigation.html">
         Log in and navigate
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-storage-array-discovery.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/vcenter-plugin/san-spvc-ic-storage-array-discovery.html">
         Discover storage arrays
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-storage-provisioning.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/vcenter-plugin/san-spvc-ic-storage-provisioning.html">
         Provision storage
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/san-spvc-ic-plugin-removal.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/vcenter-plugin/san-spvc-ic-plugin-removal.html">
         Remove plugin
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Legacy solutions</div>
@@ -3091,19 +3091,16 @@
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">Home</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">Documentation</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/us-en/e-series/">e-series</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          Search results
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -3113,7 +3110,6 @@
       <div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">Search results</h1>
 </div>
-
 
 
 <div id="search-demo-container" class="n-property-bar__search">
@@ -3139,7 +3135,6 @@
     <!-- Page Container -->
   </div>
 
-  
   <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
