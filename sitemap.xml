@@ -20,14 +20,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/access-sam-setup-wizard-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/access-sam-setup-wizard-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/access-sam-setup-wizard-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/access-sam-setup-wizard-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
@@ -412,14 +412,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/configure-storage-host-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/configure-storage-host-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/configure-storage-host-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/configure-storage-host-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
@@ -496,14 +496,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/discover-storage-host-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/discover-storage-host-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/discover-storage-host-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/discover-storage-host-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
@@ -762,14 +762,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/fc-perform-specific-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/fc-perform-specific-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/fc-perform-specific-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/fc-perform-specific-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
@@ -1007,20 +1007,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/install-hw-cabling/</loc>
-      
-      <lastmod>2021-10-01T20:09:03+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/install-hw-e2800-e5700/</loc>
-      
-      <lastmod>2021-11-02T21:29:49+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/</loc>
       
       <lastmod>2021-10-22T19:28:37+00:00</lastmod>
@@ -1035,16 +1021,23 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/</loc>
+      
+      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/upgrade-controllers/</loc>
       
       <lastmod>2021-08-27T18:19:24+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/cloud-connector/</loc>
       
-      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
+      <lastmod>2021-11-02T14:07:28+00:00</lastmod>
       
     </url>
   
@@ -1056,6 +1049,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/remote-storage-volumes/</loc>
+      
+      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/upgrade-santricity/</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
@@ -1063,9 +1063,44 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/cloud-connector/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/</loc>
       
-      <lastmod>2021-11-02T14:07:28+00:00</lastmod>
+      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/install-hw-cabling/</loc>
+      
+      <lastmod>2021-10-01T20:09:03+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/</loc>
+      
+      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/install-hw-ef600/</loc>
+      
+      <lastmod>2021-11-17T20:16:29+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/</loc>
+      
+      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/install-hw-e2800-e5700/</loc>
+      
+      <lastmod>2021-11-02T21:29:49+00:00</lastmod>
       
     </url>
   
@@ -1080,41 +1115,6 @@
       <loc>https://docs.netapp.com/us-en/e-series/web-services-proxy/</loc>
       
       <lastmod>2021-11-05T20:20:41+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/</loc>
-      
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/remote-storage-volumes/</loc>
-      
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/install-hw-ef600/</loc>
-      
-      <lastmod>2021-11-17T20:16:29+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/upgrade-controllers/</loc>
-      
-      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/</loc>
-      
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
@@ -1280,14 +1280,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/iscsi-perform-specific-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/iscsi-perform-specific-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/iscsi-perform-specific-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/iscsi-perform-specific-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
@@ -1924,9 +1924,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/overview-concept.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/overview-concept.html</loc>
       
-      <lastmod>2021-10-22T19:28:37+00:00</lastmod>
+      <lastmod>2021-09-30T01:15:38+00:00</lastmod>
       
     </url>
   
@@ -1938,9 +1938,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/overview-concept.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/overview-concept.html</loc>
       
-      <lastmod>2021-09-30T01:15:38+00:00</lastmod>
+      <lastmod>2021-10-22T19:28:37+00:00</lastmod>
       
     </url>
   
@@ -2197,14 +2197,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/sas-perform-specific-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/sas-perform-specific-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/sas-perform-specific-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/sas-perform-specific-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
@@ -2241,7 +2241,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series//search.html</loc>
       
-      <lastmod>2022-04-15T15:42:18+00:00</lastmod>
+      <lastmod>2022-05-03T05:52:38+00:00</lastmod>
       
     </url>
   
@@ -2428,16 +2428,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/verify-storage-access-host-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/verify-storage-access-host-task.html</loc>
       
-      <lastmod>2021-10-22T19:28:37+00:00</lastmod>
+      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/verify-storage-access-host-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/verify-storage-access-host-task.html</loc>
       
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      <lastmod>2021-10-22T19:28:37+00:00</lastmod>
       
     </url>
   
