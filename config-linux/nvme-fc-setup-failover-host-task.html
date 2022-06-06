@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-setup-failover-host-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/e-series/config-linux/nvme-fc-setup-failover-host-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/e-series/config-linux/nvme-fc-setup-failover-host-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/e-series/config-linux/nvme-fc-setup-failover-host-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/e-series/config-linux/nvme-fc-setup-failover-host-task.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-setup-failover-host-task.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/e-series/config-linux/nvme-fc-setup-failover-host-task.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/e-series/config-linux/nvme-fc-setup-failover-host-task.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/e-series/config-linux/nvme-fc-setup-failover-host-task.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/e-series/config-linux/nvme-fc-setup-failover-host-task.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -2958,7 +2950,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/e-series/index.html">
         E-Series systems docs
       </a></li><li class="subfolders "><a href="#">
@@ -4045,7 +4037,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-24 17:05:30 +0000">11/24/2021</time>
+    <time datetime="2022-06-06 15:51:33 +0000">06/06/2022</time>
     
   
 
@@ -4071,6 +4063,14 @@
           alt="NetAppZacharyWambold"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/73244192?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
+    <img  class="avatar avatar-small"
+          alt="netapp-jsnyder"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/69054128?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4158,7 +4158,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="set-up-native-nmve-multipathign-for-rhel-8">Set up Native NMVe Multipathign for RHEL 8</h2>
+<h2 id="set-up-native-nmve-multipathing-for-rhel-8">Set up Native NMVe Multipathing for RHEL 8</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <div class="title">About this task</div>
@@ -4371,4 +4371,5 @@ For SLES 15, Native NVMe Multipathing is enabled by default and no additional co
     </script>
     <script src='/us-en/e-series/js/www-ntap.js'></script>
     <script src='/us-en/e-series/js/tabbed-blocks.js'></script>
+    <script src='/us-en/e-series/js/sidebar.js'></script>
   </body></html>
