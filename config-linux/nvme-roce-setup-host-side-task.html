@@ -4037,7 +4037,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-14 15:41:50 +0000">02/14/2022</time>
+    <time datetime="2022-06-10 13:19:30 +0000">06/10/2022</time>
     
   
 
@@ -4111,6 +4111,14 @@
 </div>
 </li>
 <li>
+<p>Get the host NQN, which will be used to configure the host to an array.</p>
+<div class="listingblock">
+<div class="content">
+<pre># cat /etc/nvme/hostnqn</pre>
+</div>
+</div>
+</li>
+<li>
 <p>Set up IPv4 IP addresses on the ethernet ports used to connect NVMe over RoCE. For each network interface, create a configuration script that contains the different variables for that interface.</p>
 <div class="paragraph">
 <p>The variables used in this step are based on server hardware and the network environment. The variables include the <code>IPADDR</code> and <code>GATEWAY</code>. These are example instructions for SLES and RHEL:</p>
@@ -4118,80 +4126,76 @@
 <div class="paragraph">
 <p><strong>SLES 12 and SLES 15</strong></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create the example file <code>/etc/sysconfig/network/ifcfg-eth4</code> as follows:</p>
+<div class="paragraph">
+<p>Create the example file <code>/etc/sysconfig/network/ifcfg-eth4</code> with the following contents.</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre>BOOTPROTO='static'
-   BROADCAST=
-   ETHTOOL_OPTIONS=
-   IPADDR='192.168.1.87/24'
-   GATEWAY='192.168.1.1'
-   MTU=
-   NAME='MT27800 Family [ConnectX-5]'
-   NETWORK=
-   REMOTE_IPADDR=
-   STARTMODE='auto'</pre>
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.1.87/24'
+GATEWAY='192.168.1.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'</pre>
 </div>
 </div>
-</li>
-<li>
-<p>Create the file <code>/etc/sysconfig/network/ifcfg-eth5</code> as follows:</p>
+<div class="paragraph">
+<p>Then, create the example file <code>/etc/sysconfig/network/ifcfg-eth5</code>:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre>BOOTPROTO='static'
-   BROADCAST=
-   ETHTOOL_OPTIONS=
-   IPADDR='192.168.2.87/24'
-   GATEWAY='192.168.2.1'
-   MTU=
-   NAME='MT27800 Family [ConnectX-5]'
-   NETWORK=
-   REMOTE_IPADDR=
-   STARTMODE='auto'</pre>
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.2.87/24'
+GATEWAY='192.168.2.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'</pre>
 </div>
 </div>
 <div class="paragraph">
 <p><strong>RHEL 7 and RHEL 8</strong></p>
 </div>
-</li>
-<li>
-<p>Create the example file <code>/etc/sysconfig/network-scripts/ifcfg-eth4</code> as follows:</p>
+<div class="paragraph">
+<p>Create the example file <code>/etc/sysconfig/network-scripts/ifcfg-eth4</code> with the following contents.</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre>BOOTPROTO='static'
-  BROADCAST=
-  ETHTOOL_OPTIONS=
-  IPADDR='192.168.1.87/24’
-  GATEWAY='192.168.1.1'
-  MTU=
-  NAME='MT27800 Family [ConnectX-5]'
-  NETWORK=
-  REMOTE_IPADDR=
-  STARTMODE='auto'</pre>
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.1.87/24’
+GATEWAY='192.168.1.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'</pre>
 </div>
 </div>
-</li>
-<li>
-<p>Create the file <code>/etc/sysconfig/network-scripts/ifcfg-eth5</code> as follows:</p>
+<div class="paragraph">
+<p>Then, create the example file <code>/etc/sysconfig/network-scripts/ifcfg-eth5</code>:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre>BOOTPROTO='static'
-   BROADCAST=
-   ETHTOOL_OPTIONS=
-   IPADDR='192.168.2.87/24'
-   GATEWAY='192.168.2.1'
-   MTU=
-   NAME='MT27800 Family [ConnectX-5]'
-   NETWORK=
-   REMOTE_IPADDR=
-   STARTMODE='auto'</pre>
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.2.87/24'
+GATEWAY='192.168.2.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'</pre>
 </div>
-</div>
-</li>
-</ul>
 </div>
 </li>
 <li>
@@ -4204,11 +4208,7 @@
 </div>
 </li>
 <li>
-<p>Set up the NVMe-oF layer on the host.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create the following file under <code>/etc/modules-load.d/</code> to load the <code>nvme-rdma</code> kernel module and make sure the kernel module will always be on, even after a reboot:</p>
+<p>Set up the NVMe-oF layer on the host. Create the following file under <code>/etc/modules-load.d/</code> to load the <code>nvme-rdma</code> kernel module and make sure the kernel module will always be on, even after a reboot:</p>
 <div class="listingblock">
 <div class="content">
 <pre># cat /etc/modules-load.d/nvme-rdma.conf
@@ -4228,9 +4228,6 @@ rdma_cm               114688  7 rpcrdma,ib_srpt,ib_srp,nvme_rdma,ib_iser,ib_iser
 ib_core               393216  15 rdma_cm,ib_ipoib,rpcrdma,ib_srpt,ib_srp,nvme_rdma,iw_cm,ib_iser,ib_umad,ib_isert,rdma_ucm,ib_uverbs,mlx5_ib,qedr,ib_cm
 t10_pi                 16384  2 sd_mod,nvme_core</pre>
 </div>
-</div>
-</li>
-</ol>
 </div>
 </li>
 </ol>
