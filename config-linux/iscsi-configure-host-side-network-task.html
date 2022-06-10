@@ -4037,7 +4037,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-10 13:38:44 +0000">06/10/2022</time>
+    <time datetime="2022-06-10 13:49:52 +0000">06/10/2022</time>
     
   
 
@@ -4050,19 +4050,19 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jolieg">
-    <img  class="avatar avatar-small"
-          alt="netapp-jolieg"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/78750754?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
     <img  class="avatar avatar-small"
           alt="netapp-jsnyder"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/69054128?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jolieg">
+    <img  class="avatar avatar-small"
+          alt="netapp-jolieg"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/78750754?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4151,19 +4151,31 @@ In addition to the public network port, iSCSI initiators should use two or more 
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Determine the iSCSI port names using the <code># ifconfig -a</code> command.</p>
+<p>Determine the iSCSI port names using the <code>ifconfig -a</code> command.</p>
 </li>
 <li>
 <p>Set the IP address for the iSCSI initiator ports. The initiator ports should be present on the same subnet as the iSCSI target ports.</p>
 <div class="listingblock">
 <div class="content">
-<pre># vim /etc/sysconfig/network-scripts/ifcfg-&lt;NIC port&gt;
-Edit:
-BOOTPROTO=none
+<pre># vim /etc/sysconfig/network-scripts/ifcfg-&lt;NIC port&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Edit:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>BOOTPROTO=none
 ONBOOT=yes
-NM_CONTROLLED=no
-Add:
-IPADDR=192.168.xxx.xxx
+NM_CONTROLLED=no</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>IPADDR=192.168.xxx.xxx
 NETMASK=255.255.255.0</pre>
 </div>
 </div>
@@ -4195,17 +4207,21 @@ Be sure to set the address for both iSCSI initiator ports.
 </div>
 </li>
 <li>
-<p>Configure the iSCSI interfaces by creating two iSCSI iface bindings.</p>
+<p>Establish the iSCSI sessions between initiators and targets (four total).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>When using ifaces, configure the iSCSI interfaces by creating two iSCSI iface bindings.</p>
 <div class="listingblock">
 <div class="content">
-<pre>iscsiadm -m iface -I iface0 -o new
-iscsiadm -m iface -I iface0 -o update -n iface.net_ifacename -v &lt;NIC port1&gt;</pre>
+<pre># iscsiadm -m iface -I iface0 -o new
+# iscsiadm -m iface -I iface0 -o update -n iface.net_ifacename -v &lt;NIC port1&gt;</pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>iscsiadm -m iface -I iface1 -o new
-iscsiadm -m iface -I iface1 -o update -n iface.net_ifacename -v &lt;NIC port2&gt;</pre>
+<pre># iscsiadm -m iface -I iface1 -o new
+# iscsiadm -m iface -I iface1 -o update -n iface.net_ifacename -v &lt;NIC port2&gt;</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -4222,14 +4238,18 @@ To list the interfaces, use <code>iscsiadm -m iface</code>.
 </div>
 </li>
 <li>
-<p>Establish the iSCSI sessions between initiators and targets (four total).</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
 <p>Discover iSCSI targets. Save the IQN (it will be the same with each discovery) in the worksheet for the next step.</p>
 <div class="listingblock">
 <div class="content">
-<pre>iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0 -P 1</pre>
+<pre># iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0 -P 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -4251,11 +4271,19 @@ The IQN looks like the following:
 </div>
 </li>
 <li>
-<p>Create the connection between the iSCSI initiators and iSCSI targets, using ifaces.</p>
+<p>Create the connection between the iSCSI initiators and iSCSI targets.</p>
 <div class="listingblock">
 <div class="content">
-<pre>iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
+<pre># iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
 -p 192.168.0.1:3260 -I iface0 -l</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># iscsiadm -m node -L all</pre>
 </div>
 </div>
 </li>
