@@ -4037,7 +4037,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-22 19:28:37 +0000">10/22/2021</time>
+    <time datetime="2022-06-10 13:58:29 +0000">06/10/2022</time>
     
   
 
@@ -4047,6 +4047,14 @@
           alt="NetAppZacharyWambold"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/73244192?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
+    <img  class="avatar avatar-small"
+          alt="netapp-jsnyder"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/69054128?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4093,7 +4101,7 @@ The <code>nvme discover</code> command discovers all controller ports in the sub
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># nvme discover  -t rdma -a 10.10.10.100
+<pre># nvme discover -t rdma -a 10.10.10.100
  Discovery Log Number of Records 2, Generation counter 0
  =====Discovery Log Entry 0======
  trtype:  rdma
@@ -4136,7 +4144,7 @@ The <code>nvme discover</code> command discovers all controller ports in the sub
 <img src="/us-en/e-series/images/note.svg" alt="Note">
 </td>
 <td class="content">
-The above command does not persist through reboot. The <code>NVMe connect</code> command will need to be executed after each reboot to re-establish the NVMe connections.
+The above command does not persist through reboot. The <code>nvme connect</code> command will need to be executed after each reboot to re-establish the NVMe connections.
 </td>
 </tr>
 </table>
@@ -4203,7 +4211,7 @@ The recommended controller loss timeout period in seconds is 60 minutes (3600 se
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># nvme connect -t rdma -a 10.10.10.100 -n  nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600</pre>
+<pre># nvme connect -t rdma -a 10.10.10.100 -n nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600</pre>
 </div>
 </div>
 </li>
@@ -4230,7 +4238,7 @@ The recommended controller loss timeout period in seconds is 60 minutes (3600 se
 <p>Connect to the discovered subsystem on the second path:</p>
 <div class="listingblock">
 <div class="content">
-<pre>  # nvme connect -t rdma -a 11.11.11.100 -n  nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600</pre>
+<pre>  # nvme connect -t rdma -a 11.11.11.100 -n nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600</pre>
 </div>
 </div>
 </li>
