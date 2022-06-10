@@ -4037,7 +4037,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-10 15:16:56 +0000">02/10/2022</time>
+    <time datetime="2022-06-10 13:26:45 +0000">06/10/2022</time>
     
   
 
@@ -4050,19 +4050,19 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jolieg">
-    <img  class="avatar avatar-small"
-          alt="netapp-jolieg"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/78750754?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
     <img  class="avatar avatar-small"
           alt="netapp-jsnyder"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/69054128?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jolieg">
+    <img  class="avatar avatar-small"
+          alt="netapp-jolieg"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/78750754?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4121,10 +4121,18 @@
 </div>
 </li>
 <li>
+<p>Get the host NQN, which will be used to configure the host to an array.</p>
+<div class="listingblock">
+<div class="content">
+<pre># cat /etc/nvme/hostnqn</pre>
+</div>
+</div>
+</li>
+<li>
 <p>Check that both ib port links are up and the State = Active:</p>
 <div class="listingblock">
 <div class="content">
-<pre> # ibstat</pre>
+<pre># ibstat</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -4169,33 +4177,33 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>  BOOTPROTO='static'
-  BROADCAST=
-  ETHTOOL_OPTIONS=
-  IPADDR='10.10.10.100/24'
-  IPOIB_MODE='connected'
-  MTU='65520'
-  NAME=
-  NETWORK=
-  REMOTE_IPADDR=
-  STARTMODE='auto'</pre>
+<pre>BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='10.10.10.100/24'
+IPOIB_MODE='connected'
+MTU='65520'
+NAME=
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Then, create the file /etc/sysconfig/network/ifcfg-ib1.</p>
+<p>Then, create the file /etc/sysconfig/network/ifcfg-ib1:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>  BOOTPROTO='static'
-  BROADCAST=
-  ETHTOOL_OPTIONS=
-  IPADDR='11.11.11.100/24'
-  IPOIB_MODE='connected'
-  MTU='65520'
-  NAME=
-  NETWORK=
-  REMOTE_IPADDR=
-  STARTMODE='auto'</pre>
+<pre>BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='11.11.11.100/24'
+IPOIB_MODE='connected'
+MTU='65520'
+NAME=
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4206,17 +4214,17 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>  CONNECTED_MODE=no
-  TYPE=InfiniBand
-  PROXY_METHOD=none
-  BROWSER_ONLY=no
-  BOOTPROTO=static
-  IPADDR='10.10.10.100/24'
-  DEFROUTE=no
-  IPV4=FAILURE_FATAL=yes
-  IPV6INIT=no
-  NAME=ib0
-  ONBOOT=yes</pre>
+<pre>CONNECTED_MODE=no
+TYPE=InfiniBand
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+IPADDR='10.10.10.100/24'
+DEFROUTE=no
+IPV4=FAILURE_FATAL=yes
+IPV6INIT=no
+NAME=ib0
+ONBOOT=yes</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4224,17 +4232,17 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>  CONNECTED_MODE=no
-  TYPE=InfiniBand
-  PROXY_METHOD=none
-  BROWSER_ONLY=no
-  BOOTPROTO=static
-  IPADDR='11.11.11.100/24'
-  DEFROUTE=no
-  IPV4=FAILURE_FATAL=yes
-  IPV6INIT=no
-  NAME=ib1
-  ONBOOT=yes</pre>
+<pre>CONNECTED_MODE=no
+TYPE=InfiniBand
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+IPADDR='11.11.11.100/24'
+DEFROUTE=no
+IPV4=FAILURE_FATAL=yes
+IPV6INIT=no
+NAME=ib1
+ONBOOT=yes</pre>
 </div>
 </div>
 </li>
