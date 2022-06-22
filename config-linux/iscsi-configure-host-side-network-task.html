@@ -4037,24 +4037,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-10 13:49:52 +0000">06/10/2022</time>
+    <time datetime="2022-06-22 21:49:13 +0000">06/22/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/NetAppZacharyWambold">
-    <img  class="avatar avatar-small"
-          alt="NetAppZacharyWambold"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/73244192?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
     <img  class="avatar avatar-small"
           alt="netapp-jsnyder"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/69054128?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/NetAppZacharyWambold">
+    <img  class="avatar avatar-small"
+          alt="NetAppZacharyWambold"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/73244192?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4155,9 +4155,20 @@ In addition to the public network port, iSCSI initiators should use two or more 
 </li>
 <li>
 <p>Set the IP address for the iSCSI initiator ports. The initiator ports should be present on the same subnet as the iSCSI target ports.</p>
+<div class="paragraph">
+<p><strong>Red Hat Enterprise Linux 7 and 8 (RHEL 7 and RHEL 8)</strong></p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre># vim /etc/sysconfig/network-scripts/ifcfg-&lt;NIC port&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>SUSE Linux Enterprise Server 12 and 15 (SLES 12 and SLES 15)</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vim /etc/sysconfig/network/ifcfg-&lt;NIC port&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
