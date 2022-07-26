@@ -8,8 +8,19 @@
     <description>The latest updates from NetApp Documentation</description>
     <language>en-us</language>
     <ttl>60</ttl>
-    <pubDate>Tue, 19 Jul 2022 11:44:26 +0000</pubDate>
-    <lastBuildDate>Tue, 19 Jul 2022 11:44:26 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Jul 2022 14:55:04 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Jul 2022 14:55:04 +0000</lastBuildDate>
+    
+    
+    
+    <item>
+      <title>What&amp;#8217;s new in SANtricity OS (19 May 2022)</title>
+      <pubDate>Thu, 19 May 2022 15:54:46 +0000</pubDate>
+      <link>https://docs.netapp.com/us-en/e-series/whats-new.html?time=1652975686</link>
+      <guid isPermaLink="false">Thu, 19 May 2022 15:54:46 +0000</guid>
+      <description><![CDATA[ New features in SANtricity OS. ]]></description>
+    </item>
+    
     
   </channel>
 </rss>
