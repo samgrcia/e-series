@@ -76,14 +76,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/batteries-overview-requirements-concept.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-overview-requirements-concept.html</loc>
       
       <lastmod>2021-11-12T20:04:24+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-overview-requirements-concept.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/batteries-overview-requirements-concept.html</loc>
       
       <lastmod>2021-11-12T20:04:24+00:00</lastmod>
       
@@ -118,16 +118,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/batteries-replace-supertask-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-replace-supertask-task.html</loc>
       
-      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
+      <lastmod>2022-05-06T19:28:23+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-replace-supertask-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/batteries-replace-supertask-task.html</loc>
       
-      <lastmod>2022-05-06T19:28:23+00:00</lastmod>
+      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
       
     </url>
   
@@ -230,6 +230,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-batteries-wombat.html</loc>
+      
+      <lastmod>2021-09-08T14:09:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/concept-batteries-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
@@ -238,13 +245,6 @@
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/concept-batteries-wombat.html</loc>
-      
-      <lastmod>2021-09-08T14:09:53+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-batteries-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
@@ -265,6 +265,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-controllers-wombat.html</loc>
+      
+      <lastmod>2021-09-08T14:09:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/concept-controllers-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
@@ -279,14 +286,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-controllers-wombat.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-dimms-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-dimms-wombat.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-drives-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
@@ -307,14 +314,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-drives-wombat.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-fans-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-fans-wombat.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-host-interface-cards-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
@@ -335,7 +342,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-host-interface-cards-wombat.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-host-port-protocol-conversion-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
@@ -343,13 +350,6 @@
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/concept-host-port-protocol-conversion-wombat.html</loc>
-      
-      <lastmod>2021-09-08T14:09:53+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/concept-host-port-protocol-conversion-wombat.html</loc>
       
       <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
@@ -442,14 +442,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/controllers-overview-concept.html</loc>
       
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/controllers-overview-supertask-concept.html</loc>
-      
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
+      <lastmod>2022-07-21T15:25:19+00:00</lastmod>
       
     </url>
   
@@ -457,6 +450,13 @@
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/controllers-overview-supertask-concept.html</loc>
       
       <lastmod>2021-11-12T20:04:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/controllers-overview-supertask-concept.html</loc>
+      
+      <lastmod>2022-07-21T15:25:19+00:00</lastmod>
       
     </url>
   
@@ -526,7 +526,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/drives-60-replace-task.html</loc>
       
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
+      <lastmod>2022-07-26T15:58:40+00:00</lastmod>
       
     </url>
   
@@ -552,6 +552,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html</loc>
+      
+      <lastmod>2021-10-01T16:55:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/drives-overview-supertask-concept.html</loc>
       
       <lastmod>2022-07-26T15:21:40+00:00</lastmod>
@@ -562,13 +569,6 @@
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-overview-supertask-concept.html</loc>
       
       <lastmod>2022-07-26T15:21:40+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html</loc>
-      
-      <lastmod>2021-10-01T16:55:35+00:00</lastmod>
       
     </url>
   
@@ -589,7 +589,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html</loc>
       
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
+      <lastmod>2022-07-26T16:05:25+00:00</lastmod>
       
     </url>
   
@@ -603,7 +603,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/install-hw-e2800-e5700/e2824-e5724-connect-cables-task.html</loc>
       
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
+      <lastmod>2022-07-21T15:25:19+00:00</lastmod>
       
     </url>
   
@@ -638,7 +638,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/install-hw-e2800-e5700/e2860-e5760-connect-cables-task.html</loc>
       
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
+      <lastmod>2022-07-21T15:25:19+00:00</lastmod>
       
     </url>
   
@@ -715,7 +715,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/fc-configure-multipath-software-task.html</loc>
       
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -832,6 +832,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-overview-supertask-concept.html</loc>
+      
+      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/hics-overview-supertask-concept.html</loc>
       
       <lastmod>2021-11-12T20:04:24+00:00</lastmod>
@@ -846,7 +853,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-overview-supertask-concept.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-replace-supertask-task.html</loc>
       
       <lastmod>2021-11-12T20:04:24+00:00</lastmod>
       
@@ -863,13 +870,6 @@
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/hics-replace-supertask-task.html</loc>
       
       <lastmod>2022-04-13T18:45:28+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-replace-supertask-task.html</loc>
-      
-      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
       
     </url>
   
@@ -904,7 +904,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/install-hw-cabling/hotadd-drive-shelf-task.html</loc>
       
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
+      <lastmod>2022-07-21T15:25:19+00:00</lastmod>
       
     </url>
   
@@ -944,6 +944,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-complete-protocol-conversion-task.html</loc>
+      
+      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/hpp-complete-protocol-conversion-task.html</loc>
       
       <lastmod>2021-11-12T20:04:24+00:00</lastmod>
@@ -958,9 +965,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-complete-protocol-conversion-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-overview-supertask-concept.html</loc>
       
-      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
+      <lastmod>2021-09-08T14:09:53+00:00</lastmod>
       
     </url>
   
@@ -974,14 +981,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/hpp-overview-supertask-concept.html</loc>
       
-      <lastmod>2022-07-26T15:33:26+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-overview-supertask-concept.html</loc>
-      
-      <lastmod>2021-09-08T14:09:53+00:00</lastmod>
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -1000,41 +1000,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/</loc>
-      
-      <lastmod>2022-05-17T18:24:06+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/web-services-proxy/</loc>
-      
-      <lastmod>2022-05-20T14:59:45+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/</loc>
-      
-      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/install-hw-cabling/</loc>
-      
-      <lastmod>2021-10-01T20:09:03+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/remote-storage-volumes/</loc>
-      
-      <lastmod>2022-05-20T14:59:45+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/us-en/e-series/getting-started/</loc>
       
       <lastmod>2021-10-01T20:09:03+00:00</lastmod>
@@ -1042,16 +1007,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-linux/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/install-hw-cabling/</loc>
       
-      <lastmod>2022-05-17T18:24:06+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/install-hw-ef600/</loc>
-      
-      <lastmod>2021-11-17T20:16:29+00:00</lastmod>
+      <lastmod>2022-10-07T18:02:15+00:00</lastmod>
       
     </url>
   
@@ -1063,6 +1021,34 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/remote-storage-volumes/</loc>
+      
+      <lastmod>2022-05-20T14:59:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/config-vmware/</loc>
+      
+      <lastmod>2022-05-17T18:24:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/</loc>
+      
+      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/cloud-connector/</loc>
+      
+      <lastmod>2022-06-10T15:44:03+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-windows/</loc>
       
       <lastmod>2022-05-17T18:24:06+00:00</lastmod>
@@ -1070,7 +1056,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/upgrade-controllers/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-linux/</loc>
+      
+      <lastmod>2022-05-17T18:24:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e5700/</loc>
       
       <lastmod>2021-08-27T18:19:24+00:00</lastmod>
       
@@ -1084,9 +1077,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/cloud-connector/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/</loc>
       
-      <lastmod>2022-06-10T15:44:03+00:00</lastmod>
+      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/install-hw-ef600/</loc>
+      
+      <lastmod>2021-11-17T20:16:29+00:00</lastmod>
       
     </url>
   
@@ -1098,16 +1098,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-e2800/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/web-services-proxy/</loc>
       
-      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
+      <lastmod>2022-05-20T14:59:45+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/upgrade-controllers/</loc>
       
-      <lastmod>2021-11-12T20:04:24+00:00</lastmod>
+      <lastmod>2021-08-27T18:19:24+00:00</lastmod>
       
     </url>
   
@@ -1212,7 +1212,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/iscsi-configure-host-side-network-task.html</loc>
       
-      <lastmod>2022-06-22T21:49:13+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
@@ -1226,7 +1226,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/iscsi-configure-multipath-software-task.html</loc>
       
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -1338,14 +1338,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/iser-ib-configure-multipath-software-task.html</loc>
       
-      <lastmod>2022-01-06T16:14:01+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/iser-ib-configure-network-attached-hosts-task.html</loc>
       
-      <lastmod>2022-05-30T13:52:09+00:00</lastmod>
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -1359,7 +1359,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/iser-ib-configure-subnet-manager-task.html</loc>
       
-      <lastmod>2021-11-30T22:12:14+00:00</lastmod>
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -1367,6 +1367,13 @@
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/iser-ib-create-partition-files-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/config-linux/iser-ib-determine-host-port-guids-task.html</loc>
+      
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -1478,7 +1485,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/legal-notices.html</loc>
       
-      <lastmod>2021-11-29T18:03:55+00:00</lastmod>
+      <lastmod>2022-06-07T17:39:21+00:00</lastmod>
       
     </url>
   
@@ -1527,7 +1534,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-access-physical-targets-concept.html</loc>
       
-      <lastmod>2021-11-23T22:05:04+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -1560,9 +1567,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-create-partition-files-task.html</loc>
+      <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-12-task.html</loc>
       
-      <lastmod>2021-11-23T22:05:04+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html</loc>
+      
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
@@ -1597,14 +1611,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-setup-failover-host-task.html</loc>
       
-      <lastmod>2022-06-06T19:12:01+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-setup-host-side-task.html</loc>
       
-      <lastmod>2021-12-08T21:05:43+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
@@ -1632,7 +1646,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-ib-access-physical-targets-concept.html</loc>
       
-      <lastmod>2021-11-23T22:05:04+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -1667,7 +1681,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-ib-configure-subnet-manager-task.html</loc>
       
-      <lastmod>2021-11-30T22:12:14+00:00</lastmod>
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -1681,7 +1695,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-ib-create-filesystems-sles-15-task.html</loc>
       
-      <lastmod>2021-11-24T17:05:30+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
@@ -1689,6 +1703,13 @@
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-ib-define-host-task.html</loc>
       
       <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-ib-determine-host-port-guids-task.html</loc>
+      
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -1723,14 +1744,14 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-ib-set-up-failover-task.html</loc>
       
-      <lastmod>2021-11-24T17:05:30+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-ib-setup-host-side-task.html</loc>
       
-      <lastmod>2022-06-10T13:26:45+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
@@ -1758,7 +1779,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-roce-access-physical-targets-concept.html</loc>
       
-      <lastmod>2021-11-23T22:05:04+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -1800,7 +1821,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-roce-configure-switch-task.html</loc>
       
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -1814,7 +1835,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-roce-create-filesystems-sles-15-task.html</loc>
       
-      <lastmod>2021-11-23T22:05:04+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
@@ -1856,21 +1877,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-roce-setup-failover-host-task.html</loc>
       
-      <lastmod>2021-12-08T21:05:43+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-roce-setup-host-side-task.html</loc>
       
-      <lastmod>2022-06-10T13:19:30+00:00</lastmod>
+      <lastmod>2022-09-26T19:21:58+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/nvme-roce-verify-linux-config-support-task.html</loc>
       
-      <lastmod>2022-04-08T14:59:09+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -1917,6 +1938,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/e-series/config-windows/overview-concept.html</loc>
+      
+      <lastmod>2021-09-30T01:15:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/overview-concept.html</loc>
       
       <lastmod>2021-12-03T17:28:38+00:00</lastmod>
@@ -1927,13 +1955,6 @@
       <loc>https://docs.netapp.com/us-en/e-series/install-hw-ef600/overview-concept.html</loc>
       
       <lastmod>2021-11-02T16:17:43+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/e-series/config-windows/overview-concept.html</loc>
-      
-      <lastmod>2021-09-30T01:15:38+00:00</lastmod>
       
     </url>
   
@@ -2024,7 +2045,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/upgrade-controllers/prepare-upgrade-controllers-task.html</loc>
       
-      <lastmod>2022-02-10T21:25:36+00:00</lastmod>
+      <lastmod>2022-10-07T14:39:37+00:00</lastmod>
       
     </url>
   
@@ -2038,7 +2059,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/upgrade-controllers/reconfigure-sas-task.html</loc>
       
-      <lastmod>2022-07-26T15:21:40+00:00</lastmod>
+      <lastmod>2022-10-27T20:42:57+00:00</lastmod>
       
     </url>
   
@@ -2073,21 +2094,21 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/vcenter-plugin/san-spvc-ic-installation.html</loc>
       
-      <lastmod>2022-04-15T16:44:34+00:00</lastmod>
+      <lastmod>2022-10-31T16:35:53+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/vcenter-plugin/san-spvc-ic-login-and-navigation.html</loc>
       
-      <lastmod>2022-04-14T14:54:52+00:00</lastmod>
+      <lastmod>2022-10-31T16:35:53+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/vcenter-plugin/san-spvc-ic-overview.html</loc>
       
-      <lastmod>2022-05-13T15:11:32+00:00</lastmod>
+      <lastmod>2022-10-31T16:35:53+00:00</lastmod>
       
     </url>
   
@@ -2129,7 +2150,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/sas-add-supertask-task.html</loc>
       
-      <lastmod>2022-05-13T15:11:32+00:00</lastmod>
+      <lastmod>2022-07-26T16:05:25+00:00</lastmod>
       
     </url>
   
@@ -2143,7 +2164,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/sas-configure-multipath-software-task.html</loc>
       
-      <lastmod>2022-01-06T16:14:01+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -2185,7 +2206,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/maintenance-ef600/sas-overview-supertask-concept.html</loc>
       
-      <lastmod>2022-05-13T15:11:32+00:00</lastmod>
+      <lastmod>2022-07-26T16:05:25+00:00</lastmod>
       
     </url>
   
@@ -2234,7 +2255,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series//search.html</loc>
       
-      <lastmod>2022-08-31T19:33:59+00:00</lastmod>
+      <lastmod>2022-11-02T21:12:46+00:00</lastmod>
       
     </url>
   
@@ -2276,7 +2297,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/srp-ib-configure-multipath-software-task.html</loc>
       
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      <lastmod>2022-10-10T22:10:31+00:00</lastmod>
       
     </url>
   
@@ -2290,7 +2311,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/srp-ib-configure-subnet-manager-task.html</loc>
       
-      <lastmod>2021-11-30T22:12:14+00:00</lastmod>
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -2304,7 +2325,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/config-linux/srp-ib-determine-host-port-guids-task.html</loc>
       
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -2360,7 +2381,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/remote-storage-volumes/system-reqs-concept.html</loc>
       
-      <lastmod>2021-10-28T17:32:18+00:00</lastmod>
+      <lastmod>2022-10-06T14:58:01+00:00</lastmod>
       
     </url>
   
@@ -2416,7 +2437,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html</loc>
       
-      <lastmod>2022-02-10T21:25:36+00:00</lastmod>
+      <lastmod>2022-10-11T16:43:50+00:00</lastmod>
       
     </url>
   
@@ -2430,7 +2451,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/vcenter-plugin/vc-olh-add-capacity-to-a-pool-or-volume-group.html</loc>
       
-      <lastmod>2022-05-11T19:45:19+00:00</lastmod>
+      <lastmod>2022-10-06T16:00:08+00:00</lastmod>
       
     </url>
   
@@ -2570,7 +2591,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/vcenter-plugin/vc-olh-create-a-volume-group.html</loc>
       
-      <lastmod>2022-05-11T19:45:19+00:00</lastmod>
+      <lastmod>2022-10-06T16:00:08+00:00</lastmod>
       
     </url>
   
@@ -2598,7 +2619,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/vcenter-plugin/vc-olh-create-pool-manually.html</loc>
       
-      <lastmod>2022-05-11T19:45:19+00:00</lastmod>
+      <lastmod>2022-10-06T16:00:08+00:00</lastmod>
       
     </url>
   
@@ -3158,7 +3179,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/e-series/whats-new.html</loc>
       
-      <lastmod>2022-05-19T15:54:46+00:00</lastmod>
+      <lastmod>2022-10-31T16:35:53+00:00</lastmod>
       
     </url>
   

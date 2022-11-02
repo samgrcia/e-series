@@ -143,6 +143,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/e-series"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -256,6 +267,8 @@
         </a>
       </div>
 
+      
+      
       
       <div class="search-property-bar">
         <div id="search-demo-container" class="searchbox n-property-bar__search">
@@ -894,6 +907,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -966,6 +981,8 @@
             NVMe over InfiniBand Setup
           </a>
           
+
+
 
 
 
@@ -1084,6 +1101,8 @@
             NVMe over Fibre Channel setup
           </a>
           
+
+
 
 
 
@@ -2827,7 +2846,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Release notes</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What's new"
@@ -2850,7 +2869,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Get started</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What's included in this site"
@@ -2866,7 +2885,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Learn about E-Series systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="E-Series terminology"
@@ -2917,7 +2936,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install hardware</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="EF300 and EF600"
@@ -2926,7 +2945,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> EF300 and EF600</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -2977,7 +2996,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> E2800 and E5700</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3000,7 +3019,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and set up 60-drives</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prepare for install"
@@ -3037,7 +3056,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and set up 12 and 24-drives</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Prepare for install"
@@ -3074,7 +3093,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 3040 40U cabinet</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3132,7 +3151,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cabling</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3190,7 +3209,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Deploy software</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Linux express configuration"
@@ -3199,7 +3218,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Linux express configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -3222,7 +3241,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Fibre Channel Express Setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -3315,7 +3334,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SAS Setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -3401,7 +3420,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> iSCSI Setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -3515,7 +3534,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> iSER over InfiniBand Setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -3530,6 +3549,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-configure-ip-address-dhcp-task.html">
         Configure IP addresses using DHCP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Determine host port GUIDs and make the recommended settings"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/iser-ib-determine-host-port-guids-task.html">
+        Determine host port GUIDs and make the recommended settings
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure subnet manager"
@@ -3615,7 +3641,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SRP over InfiniBand Setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -3630,6 +3656,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-configure-ip-address-dhcp-task.html">
         Configure IP addresses using DHCP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Determine host port GUIDs"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-determine-host-port-guids-task.html">
+        Determine host port GUIDs
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure subnet manager"
@@ -3674,13 +3707,6 @@
         Set up multipath.conf file
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Determine host port GUIDs"
-      data-li-level="4#" 
-      class=" "
-    ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/srp-ib-determine-host-port-guids-task.html">
-        Determine host port GUIDs
-      </a></li><li 
-      data-pdf-exists="true" 
       data-pdf-filename="Configure network connections—​SRP over Infiniband"
       data-li-level="4#" 
       class=" "
@@ -3715,7 +3741,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NVMe over InfiniBand Setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -3744,6 +3770,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-access-sam-setup-wizard-task.html">
         Access SANtricity System Manager and use the Setup wizard
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Determine host port GUIDs and make the recommended settings"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-determine-host-port-guids-task.html">
+        Determine host port GUIDs and make the recommended settings
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Configure subnet manager"
@@ -3823,11 +3856,11 @@
         Create filesystems (RHEL 7 and SLES 12)
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Create filesystems (RHEL 8 and SLES 15)"
+      data-pdf-filename="Create filesystems (RHEL 8, RHEL 9, and SLES 15)"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-ib-create-filesystems-sles-15-task.html">
-        Create filesystems (RHEL 8 and SLES 15)
+        Create filesystems (RHEL 8, RHEL 9, and SLES 15)
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify storage access on the host"
@@ -3850,7 +3883,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NVMe over RoCE Setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -3958,11 +3991,11 @@
         Create filesystems (RHEL 7 and SLES 12)
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Create filesystems (RHEL 8 and SLES 15)"
+      data-pdf-filename="Create filesystems (RHEL 8, RHEL 9, and SLES 15)"
       data-li-level="4#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-roce-create-filesystems-sles-15-task.html">
-        Create filesystems (RHEL 8 and SLES 15)
+        Create filesystems (RHEL 8, RHEL 9, and SLES 15)
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify storage access on host"
@@ -3985,7 +4018,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> NVMe over Fibre Channel setup</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify Linux configuration"
@@ -4072,11 +4105,18 @@
         Access NVMe volumes for physical device targets
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Create partitions and filesystems"
+      data-pdf-filename="Create filesystems (RHEL 7 and SLES 12)"
       data-li-level="4#" 
       class=" "
-    ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-create-partition-files-task.html">
-        Create partitions and filesystems
+    ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-12-task.html">
+        Create filesystems (RHEL 7 and SLES 12)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Create filesystems (RHEL 8, RHEL 9, and SLES 15)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html">
+        Create filesystems (RHEL 8, RHEL 9, and SLES 15)
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Verify storage access on host"
@@ -4099,7 +4139,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> VMware express configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4206,7 +4246,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Windows express configuration</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4320,7 +4360,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Controller Hardware Upgrade"
@@ -4329,7 +4369,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Controllers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4401,7 +4441,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SANtricity OS</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4445,7 +4485,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Maintain systems</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="EF300-EF600 Maintain Systems"
@@ -4454,7 +4494,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> EF300 and EF600</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4470,7 +4510,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Batteries</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4493,7 +4533,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Controllers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4516,7 +4556,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> DIMMs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4539,7 +4579,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Drives</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4569,7 +4609,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Fans</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4592,7 +4632,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Host interface cards</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4622,7 +4662,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Host port protocol conversion</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4652,7 +4692,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Power supplies</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4675,7 +4715,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> SAS expansion cards</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4698,7 +4738,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> E2800</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4714,7 +4754,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Batteries</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4772,7 +4812,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Controllers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4809,7 +4849,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Canisters</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4846,7 +4886,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Drives</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4883,7 +4923,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Host interface cards</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4920,7 +4960,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Host port protocol conversion</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4950,7 +4990,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> E5700</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -4966,7 +5006,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Batteries</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -4989,7 +5029,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Controllers</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -5012,7 +5052,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Canisters</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -5049,7 +5089,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Drives</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -5086,7 +5126,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Host interface cards</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -5123,7 +5163,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Host port protocol</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview and requirements"
@@ -5160,7 +5200,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Use SANtricity solutions</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Web services proxy"
@@ -5169,7 +5209,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Web services proxy</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5185,7 +5225,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Learn about Web Services</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Web Services API overview"
@@ -5222,7 +5262,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Install and configure</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Review requirements"
@@ -5301,7 +5341,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Remote volume mirroring</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5359,7 +5399,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Storage plugin for vCenter</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -5375,7 +5415,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Get started</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Install the plugin"
@@ -5426,7 +5466,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage certificates</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Certificates overview"
@@ -5491,7 +5531,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage arrays</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Array management overview"
@@ -5542,7 +5582,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Import settings</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Import settings overview"
@@ -5593,7 +5633,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Manage array groups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Array groups overview"
@@ -5644,7 +5684,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Upgrade OS software</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Upgrade overview"
@@ -5695,7 +5735,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Provision storage</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Provisioning overview"
@@ -5788,7 +5828,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure hosts</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Host creation overview"
@@ -5846,7 +5886,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Configure pools and volume groups</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Pools and volume group overview"
@@ -5974,7 +6014,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> FAQs</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="What settings are imported?"
@@ -6207,7 +6247,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Legacy solutions</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Cloud connector"
@@ -6216,7 +6256,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Cloud connector</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Overview"
@@ -6295,7 +6335,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> Technical reports</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="Platform TRs"
@@ -6342,6 +6382,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
@@ -6383,7 +6424,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-06 16:14:01 +0000">01/06/2022</time>
+    <time datetime="2022-10-10 22:10:31 +0000">10/10/2022</time>
     
   
 
@@ -6393,6 +6434,14 @@
           alt="netapp-jolieg"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/78750754?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-driley">
+    <img  class="avatar avatar-small"
+          alt="netapp-driley"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/18422994?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -6455,7 +6504,7 @@
 </li>
 <li>
 <p>Save your kernel version by running the <code>uname -r</code> command.</p>
-<div class="listingblock">
+<div id="step4" class="listingblock">
 <div class="content">
 <pre># uname -r
 3.10.0-327.el7.x86_64</pre>
@@ -6466,70 +6515,20 @@
 </div>
 </li>
 <li>
-<p>Do one of the following to enable the <code>multipathd</code> daemon on boot.</p>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">If you are using&#8230;&#8203;.</th>
-<th class="tableblock halign-left valign-top">Do this&#8230;&#8203;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>RHEL 7.x and 8.x systems:</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>systemctl enable multipathd</code></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SLES 12.x and 15.x systems:</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>systemctl enable multipathd</code></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+<p>Enable the <code>multipathd</code> daemon on boot.</p>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl enable multipathd</pre>
+</div>
+</div>
 </li>
 <li>
 <p>Rebuild the <code>initramfs</code> image or the <code>initrd</code> image under /boot directory:</p>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">If you are using&#8230;&#8203;.</th>
-<th class="tableblock halign-left valign-top">Do this&#8230;&#8203;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>RHEL 7.x and 8.x systems:</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>dracut --force --add multipath</code></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SLES 12.x and 15.x systems:</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>dracut --force --add multipath</code></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+<div class="listingblock">
+<div class="content">
+<pre>dracut --force --add multipath</pre>
+</div>
+</div>
 </li>
 <li>
 <p>Make sure that the newly created /boot/initrams-* image or /boot/initrd-* image is selected in the boot configuration file.</p>
@@ -6538,8 +6537,24 @@
 </div>
 </li>
 <li>
-<p>Use the "Create host manually" procedure in the online help to check whether the hosts are defined. Verify that each host type is either <strong>Linux DM-MP (Kernel 3.10 or later)</strong> if you enable the Automatic Load Balancing feature, or <strong>Linux DM-MP (Kernel 3.9 or earlier)</strong> if you disable the Automatic Load Balancing feature. If necessary, change the selected host type to the appropriate setting.</p>
+<p>Use the <a href="https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html">Create host manually</a> procedure in the online help to check whether the hosts are defined. Verify that each host type setting is based on the kernel information gathered in <a href="#step4">step 4</a>.</p>
 </li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Automatic Load Balancing is disabled for any volumes mapped to hosts running kernel 3.9 or earlier.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Reboot the host.</p>
 </li>
@@ -6582,11 +6597,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <span class="n-footer__fine-print">Have feedback for our website?</span>
-              <a target="_self" href="javascript:netapp_mailto()">Let us know</a>
-            </li>
-            <li class="n-footer__copyright-link">
-              <a href="https://docs.netapp.com/us-en/announcements/">Announcements</a>
+              <a target="_self" href="javascript:netapp_mailto()">Send feedback about this page</a>
             </li>
           </ul>
         </div>
