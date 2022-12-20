@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Create filesystems (RHEL 8, RHEL 9, SLES 15)</title>
+  <title>Replace drive in an EF300 array</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Create filesystems (RHEL 8, RHEL 9, SLES 15)" />
+  <meta property="og:title" content="Replace drive in an EF300 array" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" />
-	<meta property="og:description" content="For RHEL 8 and SLES 15, you create a filesystem on the native nvme device and mount the filesystem." />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" />
+	<meta property="og:description" content="Replace a drive in an EF300 array." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/e-series/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="For RHEL 8 and SLES 15, you create a filesystem on the native nvme device and mount the filesystem.">
-  <meta name="keywords" content=" file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Replace a drive in an EF300 array.">
+  <meta name="keywords" content=" replace EF300 drive, replace EF600 drive, drive failure"><!-- Icons -->
   <link rel="icon" href="/us-en/e-series/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -160,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series/issues/new?body=Page%3A%20[Create filesystems (RHEL 8, RHEL 9, SLES 15)](https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/e-series/blob/main/config-linux/nvme-fc-create-filesystems-sles-15.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/e-series/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series/issues/new?body=Page%3A%20[Replace drive in an EF300 array](https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/e-series/blob/main/maintenance-ef600/drives-replace-EF300-supertask-task.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/e-series/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -283,19 +283,19 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/fr-fr/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+          <a href="https://docs.netapp.com/fr-fr/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/de-de/e-series/config-linux/nvme-fc-create-filesystems-sles-15.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+          <a href="https://docs.netapp.com/de-de/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -1466,6 +1466,8 @@
           
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -4577,7 +4579,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Replace EF300 drive"
       data-li-level="4#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/us-en/e-series/maintenance-ef600/drives-replace-EF300-supertask-task.html">
         Replace EF300 drive
       </a></li><li 
@@ -6431,14 +6433,14 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Create filesystems (RHEL 8, RHEL 9, SLES 15)</h1>
+  <h1 class="n-doc__component-detail-heading">Replace drive in an EF300 array</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-12-16 18:59:49 +0000">12/16/2022</time>
+    <time datetime="2022-12-19 20:24:33 +0000">12/19/2022</time>
     
   
 
@@ -6456,75 +6458,608 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>For RHEL 8, RHEL 9, and SLES 15, you create a filesystem on the native nvme device and mount the filesystem.</p>
+<p>You can replace a drive in an EF300 array.</p>
+</div>
+<div class="paragraph">
+<p>The EF300 supports SAS expansion with 24-drive and 60-drive shelves. The procedure you follow depends on whether you have a 24-drive shelf or a 60-drive shelf:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#replace-drive-in-an-ef300-24-drive-shelf">Replace drive in an EF300 (24-drive shelf)</a></p>
+</li>
+<li>
+<p><a href="#replace-drive-in-an-ef300-60-drive-shelf">Replace drive in an EF300 (60-drive shelf)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="replace-drive-in-an-ef300-24-drive-shelf">Replace drive in an EF300 (24-drive shelf)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow this procedure to replace a drive in a 24-drive shelf.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>The Recovery Guru in SANtricity System Manager monitors the drives in the storage array and can notify you of an impending drive failure or an actual drive failure. When a drive has failed, its amber Attention LED is on. You can hot-swap a failed drive while the storage array is receiving I/O.</p>
+</div>
+<div class="ulist">
+<div class="title">Before you begin</div>
+<ul>
+<li>
+<p>Review drive handling requirements in <a href="drives-overview-supertask-concept.html">Requirements for EF300 or EF600 drive replacement</a>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">What you&#8217;ll need</div>
+<ul>
+<li>
+<p>A replacement drive that is supported by NetApp for your controller shelf or drive shelf.</p>
+</li>
+<li>
+<p>An ESD wristband, or you have taken other antistatic precautions.</p>
+</li>
+<li>
+<p>A flat, static-free work surface.</p>
+</li>
+<li>
+<p>A management station with a browser that can access SANtricity System Manager for the controller. (To open the System Manager interface, point the browser to the controller&#8217;s domain name or IP address.)</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="step-1-prepare-to-replace-drive-24-drive">Step 1: Prepare to replace drive (24-drive)</h3>
+<div class="paragraph">
+<p>Prepare to replace a drive by checking the Recovery Guru in SANtricity System Manager and completing any prerequisite steps. Then, you can locate the failed component.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
 <li>
-<p>Run the multipath -ll command to get a list of nvme devices.</p>
-<div class="listingblock">
-<div class="content">
-<pre># multipath -ll</pre>
-</div>
-</div>
+<p>If the Recovery Guru in SANtricity System Manager has notified you of an <em>impending drive failure</em>, but the drive has not yet failed, follow the instructions in the Recovery Guru to fail the drive.</p>
+</li>
+<li>
+<p>If needed, use SANtricity System Manager to confirm you have a suitable replacement drive.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>Hardware</strong>.</p>
+</li>
+<li>
+<p>Select the failed drive on the shelf graphic.</p>
+</li>
+<li>
+<p>Click the drive to display its context menu, and then select <strong>View settings</strong>.</p>
+</li>
+<li>
+<p>Confirm that the replacement drive has a capacity equal to or greater than the drive you are replacing and that it has the features you expect.</p>
 <div class="paragraph">
-<p>The result of this command can be used to find the devices associated <code>/dev/disk/by-id/nvme-eui.[uuid#]</code> location. For the example below this would be <code>/dev/disc/by-id/nvme-eui.000082dd5c05d39300a0980000a52225</code>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>eui.000082dd5c05d39300a0980000a52225 [nvme]:nvme0n6 NVMe,NetApp E-Series,08520000
-size=4194304 features='n/a' hwhandler='ANA' wp=rw
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:0:1 nvme0c0n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:1:1 nvme0c1n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=10 status=non-optimized
-| `- 0:2:1 nvme0c2n1 0:0 n/a non-optimized live
-`-+- policy='n/a' prio=10 status=non-optimized
-  `- 0:3:1 nvme0c3n1 0:0 n/a non-optimized live</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a file system on the partition for the desired nvme device using the location <code>/dev/disk/by-id/nvme-eui.[id#]</code>.</p>
-<div class="paragraph">
-<p>The method for creating a file system varies depending on the file system chosen. This example shows creating an ext4 file system.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre># mkfs.ext4 /dev/disk/by-id/nvme-eui.000082dd5c05d39300a0980000a52225
-mke2fs 1.42.11 (22-Oct-2019)
-Creating filesystem with 2620928 4k blocks and 655360 inodes
-Filesystem UUID: 97f987e9-47b8-47f7-b434-bf3ebbe826d0
-Superblock backups stored on blocks:
-        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
-
-Allocating group tables: done
-Writing inode tables: done
-Creating journal (32768 blocks): done
-Writing superblocks and filesystem accounting information: done</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a folder to mount the new device.</p>
-<div class="listingblock">
-<div class="content">
-<pre># mkdir /mnt/ext4</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Mount the device.</p>
-<div class="listingblock">
-<div class="content">
-<pre># mount /dev/disk/by-id/nvme-eui.000082dd5c05d39300a0980000a52225 /mnt/ext4</pre>
-</div>
+<p>For example, do not attempt to replace a hard disk drive (HDD) with a solid-state drive (SSD). Similarly, if you are replacing a secure-capable drive, make sure the replacement drive is also secure-capable.</p>
 </div>
 </li>
 </ol>
+</div>
+</li>
+<li>
+<p>If needed, use SANtricity System Manager to locate the drive within your storage array: From the drive&#8217;s context menu, select <strong>Turn on locator light</strong>.</p>
+<div class="paragraph">
+<p>The drive&#8217;s Attention LED (amber) blinks so you can identify which drive to replace.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+If you are replacing a drive in a shelf that has a bezel, you must remove the bezel to see the drive LEDs.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="step-2-remove-failed-drive-24-drive">Step 2: Remove failed drive (24-drive)</h3>
+<div class="paragraph">
+<p>Remove a failed drive to replace it with a new one.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Unpack the replacement drive, and set it on a flat, static-free surface near the shelf.</p>
+<div class="paragraph">
+<p>Save all packing materials.</p>
+</div>
+</li>
+<li>
+<p>Press the release button on the failed drive.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_drive_latch_maint-e5700.gif" alt="drw drive latch maint e5700">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For drives in E5724 controller shelves or DE224C drive shelves, the release button is located at the top of the drive.
+The cam handle on the drive springs open partially, and the drive releases from the midplane.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Open the cam handle, and slide out the drive slightly.</p>
+</li>
+<li>
+<p>Wait 30 seconds.</p>
+</li>
+<li>
+<p>Using both hands, remove the drive from the shelf.</p>
+</li>
+<li>
+<p>Place the drive on an antistatic, cushioned surface away from magnetic fields.</p>
+</li>
+<li>
+<p>Wait 30 seconds for the software to recognize that the drive has been removed.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+If you accidentally remove an active drive, wait at least 30 seconds, and then reinstall it. For the recovery procedure, refer to the storage management software.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="step-3-install-new-drive-24-drive">Step 3: Install new drive (24-drive)</h3>
+<div class="paragraph">
+<p>You install a new drive to replace the failed one. Install the replacement drive as soon as possible after removing the failed drive. Otherwise, there is a risk that the equipment might overheat.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Open the cam handle.</p>
+</li>
+<li>
+<p>Using two hands, insert the replacement drive into the open bay, firmly pushing until the drive stops.</p>
+</li>
+<li>
+<p>Slowly close the cam handle until the drive is fully seated in the midplane and the handle clicks into place.</p>
+<div class="paragraph">
+<p>The green LED on the drive comes on when the drive is inserted correctly.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Depending on your configuration, the controller might automatically reconstruct data to the new drive. If the shelf uses hot spare drives, the controller might need to perform a complete reconstruction on the hot spare before it can copy the data to the replaced drive. This reconstruction process increases the time that is required to complete this procedure.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="step-4-complete-drive-replacement-24-drive">Step 4: Complete drive replacement (24-drive)</h3>
+<div class="paragraph">
+<p>Confirm that the new drive is working correctly.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Check the Power LED and the Attention LED on the drive you replaced.</p>
+<div class="paragraph">
+<p>When you first insert a drive, its Attention LED might be on. However, the LED should go off within a minute.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Power LED is on or blinking, and the Attention LED is off: Indicates that the new drive is working correctly.</p>
+</li>
+<li>
+<p>Power LED is off: Indicates that the drive might not be installed correctly. Remove the drive, wait 30 seconds, and then reinstall it.</p>
+</li>
+<li>
+<p>Attention LED is on: Indicates that the new drive might be defective. Replace it with another new drive.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If the Recovery Guru in SANtricity System Manager still shows an issue, select <strong>Recheck</strong> to ensure the problem has been resolved.</p>
+</li>
+<li>
+<p>If the Recovery Guru indicates that drive reconstruction did not start automatically, start reconstruction manually, as follows:</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Perform this operation only when instructed to do so by technical support or the Recovery Guru.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>Hardware</strong>.</p>
+</li>
+<li>
+<p>Click the drive that you replaced.</p>
+</li>
+<li>
+<p>From the drive&#8217;s context menu, select <strong>Reconstruct</strong>.</p>
+</li>
+<li>
+<p>Confirm that you want to perform this operation.</p>
+<div class="paragraph">
+<p>When the drive reconstruction completes, the volume group is in an Optimal state.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>As required, reinstall the bezel.</p>
+</li>
+<li>
+<p>Return the failed part to NetApp, as described in the RMA instructions shipped with the kit.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">What&#8217;s next?</div>
+<p>Your drive replacement is complete. You can resume normal operations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="replace-drive-in-an-ef300-60-drive-shelf">Replace drive in an EF300 (60-drive shelf)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow this procedure to replace a drive in a 60-drive shelf.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>The Recovery Guru in SANtricity System Manager monitors the drives in the storage array and can notify you of an impending drive failure or an actual drive failure. When a drive has failed, its amber Attention LED is on. You can hot-swap a failed drive while the storage array is receiving I/O operations.</p>
+</div>
+<div class="ulist">
+<div class="title">Before you begin</div>
+<ul>
+<li>
+<p>Review drive handling requirements in <a href="drives-overview-supertask-concept.html">Requirements for EF300 or EF600 drive replacement</a>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">What you&#8217;ll need</div>
+<ul>
+<li>
+<p>A replacement drive that is supported by NetApp for your controller shelf or drive shelf.</p>
+</li>
+<li>
+<p>An ESD wristband, or you have taken other antistatic precautions.</p>
+</li>
+<li>
+<p>A management station with a browser that can access SANtricity System Manager for the controller. (To open the System Manager interface, point the browser to the controller&#8217;s domain name or IP address.)</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="step-1-prepare-to-replace-drive-60-drive">Step 1: Prepare to replace drive (60-drive)</h3>
+<div class="paragraph">
+<p>Prepare to replace a drive by checking the Recovery Guru in SANtricity System Manager and completing any prerequisite steps. Then, you can locate the failed component.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>If the Recovery Guru in SANtricity System Manager has notified you of an <em>impending drive failure</em>, but the drive has not yet failed, follow the instructions in the Recovery Guru to fail the drive.</p>
+</li>
+<li>
+<p>If needed, use SANtricity System Manager to confirm you have a suitable replacement drive.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>Hardware</strong>.</p>
+</li>
+<li>
+<p>Select the failed drive on the shelf graphic.</p>
+</li>
+<li>
+<p>Click the drive to display its context menu, and then select <strong>View settings</strong>.</p>
+</li>
+<li>
+<p>Confirm that the replacement drive has a capacity equal to or greater than the drive you are replacing and that it has the features you expect.</p>
+<div class="paragraph">
+<p>For example, do not attempt to replace a hard disk drive (HDD) with a solid-state disk (SSD). Similarly, if you are replacing a secure-capable drive, make sure the replacement drive is also secure-capable.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>If needed, use SANtricity System Manager to locate the drive within the storage array.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the shelf has a bezel, remove it so you can see the LEDs.</p>
+</li>
+<li>
+<p>From the drive&#8217;s context menu, select <strong>Turn on locator light</strong>.</p>
+<div class="paragraph">
+<p>The drive drawer&#8217;s Attention LED (amber) blinks so you can open the correct drive drawer to identify which drive to replace.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif" alt="2860 dwg attn led on drawer maint e5700">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Attention LED</em></p>
+</div>
+</li>
+<li>
+<p>Unlatch the drive drawer by pulling on both levers.</p>
+</li>
+<li>
+<p>Using the extended levers, carefully pull the drive drawer out until it stops.</p>
+</li>
+<li>
+<p>Look at the top of the drive drawer to find the Attention LED in front of each drive.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/2860_dwg_amber_on_drive_maint-e5700.gif" alt="2860 dwg amber on drive maint e5700">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Attention LED light on for the drive on the top right side</em></p>
+</div>
+<div class="paragraph">
+<p>The drive drawer Attention LEDs are on the left side in front of each drive, with an attention icon on the drive handle just behind the LED.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif" alt="28 dwg e2860 de460c attention led drive maint e5700">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Attention icon</em></p>
+</div>
+<div class="paragraph">
+<p><strong>(2)</strong> <em>Attention LED</em></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="step-2-remove-failed-drive-60-drive">Step 2: Remove failed drive (60-drive)</h3>
+<div class="paragraph">
+<p>Remove a failed drive to replace it with a new one.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Unpack the replacement drive, and set it on a flat, static-free surface near the shelf.</p>
+<div class="paragraph">
+<p>Save all packing materials for the next time you need to send a drive back.</p>
+</div>
+</li>
+<li>
+<p>Release the drive drawer levers from the center of the appropriate drive drawer by pulling both towards the sides of the drawer.</p>
+</li>
+<li>
+<p>Carefully pull on the extended drive drawer levers to pull out the drive drawer to its full extension without removing it from the enclosure.</p>
+</li>
+<li>
+<p>Gently pull back the orange release latch that is in front of the drive you want to remove.</p>
+<div class="paragraph">
+<p>The cam handle on the drive springs open partially, and the drive is released from the drawer.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/trafford_drive_rel_button_maint-e5700.gif" alt="trafford drive rel button maint e5700">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Orange release latch</em></p>
+</div>
+</li>
+<li>
+<p>Open the cam handle, and lift out the drive slightly.</p>
+</li>
+<li>
+<p>Wait 30 seconds.</p>
+</li>
+<li>
+<p>Use the cam handle to lift the drive from the shelf.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif" alt="92 dwg de6600 install or remove drive maint e5700">
+</div>
+</div>
+</li>
+<li>
+<p>Place the drive on an antistatic, cushioned surface away from magnetic fields.</p>
+</li>
+<li>
+<p>Wait 30 seconds for the software to recognize that the drive has been removed.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+If you accidentally remove an active drive, wait at least 30 seconds, and then reinstall it. For the recovery procedure, refer to the storage management software.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="step-3-install-new-drive-60-drive">Step 3: Install new drive (60-drive)</h3>
+<div class="paragraph">
+<p>Install a new drive to replace the failed one.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/caution.svg" alt="Caution">
+</td>
+<td class="content">
+<strong>Possible loss of data access</strong>&#8201;&#8212;&#8201;When pushing the drive drawer back into the enclosure, never slam the drawer shut. Push the drawer in slowly to avoid jarring the drawer and causing damage to the storage array.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Raise the cam handle on the new drive to vertical.</p>
+</li>
+<li>
+<p>Align the two raised buttons on each side of the drive carrier with the matching gap in the drive channel on the drive drawer.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif" alt="28 dwg e2860 de460c drive cru maint e5700">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>(1)</strong> <em>Raised button on the right side of the drive carrier</em></p>
+</div>
+</li>
+<li>
+<p>Lower the drive straight down, and then rotate the cam handle down until the drive snaps into place under the orange release latch.</p>
+</li>
+<li>
+<p>Carefully push the drive drawer back into the enclosure. Push the drawer in slowly to avoid jarring the drawer and causing damage to the storage array.</p>
+</li>
+<li>
+<p>Close the drive drawer by pushing both levers towards the center.</p>
+<div class="paragraph">
+<p>The green Activity LED for the replaced drive on the front of the drive drawer comes on when the drive is inserted correctly.</p>
+</div>
+<div class="paragraph">
+<p>Depending on your configuration, the controller might automatically reconstruct data to the new drive. If the shelf uses hot spare drives, the controller might need to perform a complete reconstruction on the hot spare before it can copy the data to the replaced drive. This reconstruction process increases the time that is required to complete this procedure.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="step-4-complete-drive-replacement-60-drive">Step 4: Complete drive replacement (60-drive)</h3>
+<div class="paragraph">
+<p>Confirm that the new drive is working correctly.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Check the Power LED and the Attention LED on the drive you replaced. (When you first insert a drive, its Attention LED might be on. However, the LED should go off within a minute.)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Power LED is on or blinking, and the Attention LED is off: Indicates that the new drive is working correctly.</p>
+</li>
+<li>
+<p>Power LED is off: Indicates that the drive might not be installed correctly. Remove the drive, wait 30 seconds, and then reinstall it.</p>
+</li>
+<li>
+<p>Attention LED is on: Indicates that the new drive might be defective. Replace it with another new drive.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If the Recovery Guru in SANtricity System Manager still shows an issue, select <strong>Recheck</strong> to ensure the problem has been resolved.</p>
+</li>
+<li>
+<p>If the Recovery Guru indicates that drive reconstruction did not start automatically, start reconstruction manually, as follows:</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Perform this operation only when instructed to do so by technical support or the Recovery Guru.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>Hardware</strong>.</p>
+</li>
+<li>
+<p>Click the drive that you replaced.</p>
+</li>
+<li>
+<p>From the drive&#8217;s context menu, select <strong>Reconstruct</strong>.</p>
+</li>
+<li>
+<p>Confirm that you want to perform this operation.</p>
+<div class="paragraph">
+<p>When the drive reconstruction completes, the volume group is in an Optimal state.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>As required, reinstall the bezel.</p>
+</li>
+<li>
+<p>Return the failed part to NetApp, as described in the RMA instructions shipped with the kit.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">What&#8217;s next?</div>
+<p>Your drive replacement is complete. You can resume normal operations.</p>
+</div>
+</div>
+</div>
 </div>
 
     </article>
