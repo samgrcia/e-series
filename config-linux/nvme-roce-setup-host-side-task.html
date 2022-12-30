@@ -6440,11 +6440,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-26 19:21:58 +0000">09/26/2022</time>
+    <time datetime="2022-12-30 20:34:44 +0000">12/30/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
+    <img  class="avatar avatar-small"
+          alt="netapp-jsnyder"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/69054128?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jolieg">
     <img  class="avatar avatar-small"
           alt="netapp-jolieg"
@@ -6469,14 +6477,6 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
-    <img  class="avatar avatar-small"
-          alt="netapp-jsnyder"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/69054128?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
 
 
@@ -6487,7 +6487,7 @@
 </div>
 <div class="paragraph">
 <div class="title">What you&#8217;ll need</div>
-<p>You must be running the latest compatible RHEL 7, RHEL 8, and RHEL 9 SUSE Linux Enterprise Server 12 and 15 service pack operating system. See the <a href="https://mysupport.netapp.com/matrix" target="_blank" rel="noopener">NetApp Interoperability Matrix Tool</a> for a complete list of the latest requirements.</p>
+<p>You must be running the latest compatible RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 or 15 service pack operating system. See the <a href="https://mysupport.netapp.com/matrix" target="_blank" rel="noopener">NetApp Interoperability Matrix Tool</a> for a complete list of the latest requirements.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Steps</div>
@@ -6510,6 +6510,25 @@
 <div class="content">
 <pre># yum install rdma-core
 # yum install nvme-cli</pre>
+</div>
+</div>
+</li>
+<li>
+<p>For RHEL 8 and RHEL 9, install network scripts:</p>
+<div class="paragraph">
+<p><strong>RHEL 8</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># yum install network-scripts</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>RHEL 9</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># yum install NetworkManager-initscripts-updown</pre>
 </div>
 </div>
 </li>
@@ -6564,7 +6583,7 @@ STARTMODE='auto'</pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>RHEL 7, RHEL 8, and RHEL 9</strong></p>
+<p><strong>RHEL 7 or RHEL 8</strong></p>
 </div>
 <div class="paragraph">
 <p>Create the example file <code>/etc/sysconfig/network-scripts/ifcfg-eth4</code> with the following contents.</p>
@@ -6598,6 +6617,59 @@ NAME='MT27800 Family [ConnectX-5]'
 NETWORK=
 REMOTE_IPADDR=
 STARTMODE='auto'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>RHEL 9</strong></p>
+</div>
+<div class="paragraph">
+<p>Use the <code>nmtui</code> tool to activate and edit a connection. Below is an example file <code>/etc/NetworkManager/system-connections/eth4.nmconnection</code> the tool will generate:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[connection]
+id=eth4
+uuid=&lt;unique uuid&gt;
+type=ethernet
+interface-name=eth4
+
+[ethernet]
+mtu=4200
+
+[ipv4]
+address1=192.168.1.87/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is an example file <code>/etc/NetworkManager/system-connections/eth5.nmconnection</code> the tool will generate:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[connection]
+id=eth5
+uuid=&lt;unique uuid&gt;
+type=ethernet
+interface-name=eth5
+
+[ethernet]
+mtu=4200
+
+[ipv4]
+address1=192.168.2.87/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]</pre>
 </div>
 </div>
 </li>
