@@ -6440,7 +6440,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-26 19:21:58 +0000">09/26/2022</time>
+    <time datetime="2023-01-30 20:14:46 +0000">01/30/2023</time>
     
   
 
@@ -6507,15 +6507,15 @@
 <p>Change the <code>node.session.timeo.replacement_timeout</code> variable in the /etc/iscsi/iscsid.conf file to <code>20</code>, from a default value of <code>120</code>.</p>
 <div class="listingblock">
 <div class="content">
-<pre>node.session.timeo.replacement_timeout=20</pre>
+<pre>node.session.timeo.replacement_timeout = 20</pre>
 </div>
 </div>
 </li>
 <li>
+<p>Optionally, you can set <code>node.startup = automatic</code> in /etc/iscsi/iscsid.conf before running any <code>iscsiadm</code> commands to have sessions persist after reboot.</p>
+</li>
+<li>
 <p>Make sure <code>iscsid</code> and <code>(open-)iscsi</code> services are on and enabled for boot.</p>
-<div class="paragraph">
-<p><strong>Red Hat Enterprise Linux 7, 8, and 9 (RHEL 7, RHEL 8, and RHEL9)</strong></p>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre># systemctl start iscsi
@@ -6523,18 +6523,6 @@
 # systemctl enable iscsi
 # systemctl enable iscsid</pre>
 </div>
-</div>
-<div class="paragraph">
-<p><strong>SUSE Linux Enterprise Server 12 and 15 (SLES 12 and SLES 15)</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre># systemctl start iscsid.service
-# systemctl enable iscsid.service</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Optionally, you set <code>node.startup = automatic</code> in /etc/iscsi/iscsid.conf before running any <code>iscsiadm</code> commands to have sessions persist after reboot.</p>
 </div>
 </li>
 <li>
@@ -6546,7 +6534,7 @@
 </div>
 </li>
 <li>
-<p>Configure the network for iSCSI ports:</p>
+<p>Configure the network for iSCSI ports. These are example instructions for RHEL and SLES:</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6567,38 +6555,68 @@ In addition to the public network port, iSCSI initiators should use two or more 
 <li>
 <p>Set the IP address for the iSCSI initiator ports. The initiator ports should be present on the same subnet as the iSCSI target ports.</p>
 <div class="paragraph">
-<p><strong>Red Hat Enterprise Linux 7, 8, and 9 (RHEL 7, RHEL 8, and RHEL9)</strong></p>
+<p><strong>Red Hat Enterprise Linux 7 and 8 (RHEL 7 and RHEL 8)</strong></p>
+</div>
+<div class="paragraph">
+<p>Create the example file <code>/etc/sysconfig/network-scripts/ifcfg-&lt;NIC port&gt;</code> with the following contents.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># vim /etc/sysconfig/network-scripts/ifcfg-&lt;NIC port&gt;</pre>
+<pre>TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+NAME=&lt;NIC port&gt;
+UUID=&lt;unique UUID&gt;
+DEVICE=&lt;NIC port&gt;
+ONBOOT=yes
+IPADDR=192.168.xxx.xxx
+PREFIX=24
+NETMASK=255.255.255.0
+NM_CONTROLLED=no
+MTU=</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Optional additions with regards to IPv6:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>IPV6INIT=yes
+IPV6_AUTOCONF=no
+IPV6ADDR=fdxx::192:168:xxxx:xxxx/32
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=eui64</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Red Hat Enterprise Linux 9 (RHEL 9)</strong></p>
+</div>
+<div class="paragraph">
+<p>Use the <code>nmtui</code> tool to activate and edit a connection. The tool will generate a <code>&lt;NIC port&gt;.nmconnection</code> file within <code>/etc/NetworkManager/system-connections/</code>.</p>
 </div>
 <div class="paragraph">
 <p><strong>SUSE Linux Enterprise Server 12 and 15 (SLES 12 and SLES 15)</strong></p>
 </div>
+<div class="paragraph">
+<p>Create the example file <code>/etc/sysconfig/network/ifcfg-&lt;NIC port&gt;</code> with the following contents.</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre># vim /etc/sysconfig/network/ifcfg-&lt;NIC port&gt;</pre>
+<pre>IPADDR='192.168.xxx.xxx/24'
+BOOTPROTO='static'
+STARTMODE='auto'</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Edit:</p>
+<p>Optional addition with regards to IPv6:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>BOOTPROTO=none
-ONBOOT=yes
-NM_CONTROLLED=no</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Add:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>IPADDR=192.168.xxx.xxx
-NETMASK=255.255.255.0</pre>
+<pre>IPADDR_0='fdxx::192:168:xxxx:xxxx/32'</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -6629,11 +6647,11 @@ Be sure to set the address for both iSCSI initiator ports.
 </div>
 </li>
 <li>
-<p>Establish the iSCSI sessions between initiators and targets (four total).</p>
+<p>Establish the iSCSI sessions between initiators and targets (four total) by one of two methods.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>When using ifaces, configure the iSCSI interfaces by creating two iSCSI iface bindings.</p>
+<p>(Optional) When using ifaces, configure the iSCSI interfaces by creating two iSCSI iface bindings.</p>
 <div class="listingblock">
 <div class="content">
 <pre># iscsiadm -m iface -I iface0 -o new
@@ -6661,17 +6679,22 @@ To list the interfaces, use <code>iscsiadm -m iface</code>.
 </li>
 <li>
 <p>Discover iSCSI targets. Save the IQN (it will be the same with each discovery) in the worksheet for the next step.</p>
+<div class="paragraph">
+<p><strong>Method 1 (with ifaces)</strong></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre># iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0 -P 1</pre>
+<pre># iscsiadm -m discovery -t sendtargets -p &lt;target_ip_address&gt;:&lt;target_tcp_listening_port&gt; -I iface0
+# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>or</p>
+<p><strong>Method 2 (without ifaces)</strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260</pre>
+<pre># iscsiadm -m discovery -t sendtargets -p &lt;target_ip_address&gt;:&lt;target_tcp_listening_port&gt;
+# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -6694,14 +6717,17 @@ The IQN looks like the following:
 </li>
 <li>
 <p>Create the connection between the iSCSI initiators and iSCSI targets.</p>
+<div class="paragraph">
+<p><strong>Method 1 (with ifaces)</strong></p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre># iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
--p 192.168.0.1:3260 -I iface0 -l</pre>
+<pre># iscsiadm -m node -T &lt;target_iqn&gt; -p &lt;target_ip_address&gt;:&lt;target_tcp_listening_port&gt; -I iface0 -l
+# iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3 -p 192.168.0.1:3260 -I iface0 -l</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>or</p>
+<p><strong>Method 2 (without ifaces)</strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
