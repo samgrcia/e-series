@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Get up and running with E-Series</title>
+  <title>Quick start for E-Series</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Get up and running with E-Series" />
+  <meta property="og:title" content="Quick start for E-Series" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/e-series/getting-started/getup-run-concept.html" />
 	<meta property="og:description" content="To get up and running with E-Series systems, you install hardware components, configure host systems, and configure storage." />
@@ -79,11 +79,17 @@
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/e-series/js/na-search.js'></script><script src='/us-en/e-series/js/na-pagenav.js'></script><script src='/us-en/e-series/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/us-en/e-series/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/e-series/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/us-en/e-series/js/na-utility.js'></script> -->
   <script src='/us-en/e-series/js/clouddocs.js'></script>
   <script src='/us-en/e-series/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/us-en/e-series/js/toc.js'></script>
-  <script src='/us-en/e-series/js/customscripts.js'></script><script>
+  <!-- <script src='/us-en/e-series/js/toc.js'></script> -->
+  <!-- <script src='/us-en/e-series/js/customscripts.js'></script> --><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -148,7 +154,7 @@
   <script src='/us-en/e-series/js/FileSaver.min.js'></script>
   <script src='/us-en/e-series/js/jszip-utils.min.js'></script>
   <script src='/us-en/e-series/js/jszip.min.js'></script>
-  <script src='/us-en/e-series/js/pdf-ux.js'></script>
+  <!-- <script src='/us-en/e-series/js/pdf-ux.js'></script> -->
 </head>
 
 
@@ -160,7 +166,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series/issues/new?body=Page%3A%20[Get up and running with E-Series](https://docs.netapp.com/us-en/e-series/getting-started/getup-run-concept.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/e-series/blob/main/getting-started/getup-run-concept.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/e-series/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series/issues/new?body=Page%3A%20[Quick start for E-Series](https://docs.netapp.com/us-en/e-series/getting-started/getup-run-concept.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/e-series/blob/main/getting-started/getup-run-concept.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/e-series/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/e-series/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -221,7 +227,7 @@
           <span class="n-property-bar__menu-toggle-text">Menu</span>
           <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
             <title>bars</title>
-            <use xlink:href="/us-en/e-series/common/svg/sprite.svg#bars"></use>
+            <use xlink:href="/us-en/e-series/images/sprite.svg#bars"></use>
           </svg>
         </a>
       </div>
@@ -230,11 +236,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/us-en/e-series/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/us-en/e-series/images/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
               <title>netapp-logo</title>
-              <use xlink:href="/us-en/e-series/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/us-en/e-series/images/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
         </a>
@@ -260,7 +266,7 @@
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#search"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/images/sprite.svg#search"></use>
             </svg>
           </button>
         </div>
@@ -274,7 +280,7 @@
       <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/common/svg/sprite.svg#globe"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/e-series/images/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
@@ -2883,11 +2889,11 @@
         E-Series videos
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Get up and running with E-Series"
+      data-pdf-filename="Quick start"
       data-li-level="2#" 
       class="  active "
     ><a class="na-navbar-padding" href="/us-en/e-series/getting-started/getup-run-concept.html">
-        Get up and running with E-Series
+        Quick start
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Install hardware"
@@ -6405,18 +6411,26 @@
 </div>
 
       <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Get up and running with E-Series</h1>
+  <h1 class="n-doc__component-detail-heading">Quick start for E-Series</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-05-25 21:37:21 +0000">05/25/2022</time>
+    <time datetime="2023-03-06 17:38:23 +0000">03/06/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-ivanad">
+    <img  class="avatar avatar-small"
+          alt="netapp-ivanad"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/76115643?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-jsnyder">
     <img  class="avatar avatar-small"
           alt="netapp-jsnyder"
@@ -6446,28 +6460,14 @@
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>To get up and running with E-Series systems, you install hardware components, configure host systems, and configure storage.</p>
 </div>
-<div class="paragraph">
-<p>Deploying the storage array involves the following workflow:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../media/doccenterworkflow.gif" alt="doccenterworkflow">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-1-install-hardware">Step 1: Install hardware</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png" alt="One"></span> Install hardware</div>
 <p>To install the E-Series hardware, access the Installation and Setup instructions for your storage array and shelf type:</p>
 </div>
-<div class="ulist">
+<div class="ulist quick-margin-list">
 <ul>
 <li>
 <p><a href="../install-hw-ef600/index.html" target="_blank" rel="noopener">EF600 or EF300 series with 24-drive shelf</a></p>
@@ -6480,30 +6480,22 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-2-set-up-cabinet">Step 2: Set up cabinet</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png" alt="Two"></span> Set up cabinet</div>
 <p>If you are setting up a new cabinet for the storage array, you need to move the cabinet to its permanent location, install the hardware, and connect it to a power source. To set up the cabinet, access the following instructions:</p>
 </div>
-<div class="ulist">
+<div class="ulist quick-margin-list">
 <ul>
 <li>
 <p><a href="../install-hw-cabinet/index.html" target="_blank" rel="noopener">Install 3040 40U cabinet</a></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-3-install-rails">Step 3: Install rails</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png" alt="Three"></span> Install rails</div>
 <p>When shipped, each shelf includes rack-mounting hardware. For detailed instructions on installing the rails, select your rail types:</p>
 </div>
-<div class="ulist">
+<div class="ulist quick-margin-list">
 <ul>
 <li>
 <p><a href="https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045" target="_blank" rel="noopener">Install adjustable support rails</a></p>
@@ -6519,30 +6511,22 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-4-connect-cables">Step 4: Connect cables</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png" alt="Four"></span> Connect cables</div>
 <p>The Installation and Setup instructions (Step 1) include instructions for connecting cables. However, if you need lists of supported cables and transceivers, best practices for cabling, and detailed information about the host ports for your controller, access the following instructions:</p>
 </div>
-<div class="ulist">
+<div class="ulist quick-margin-list">
 <ul>
 <li>
 <p><a href="../install-hw-cabling/index.html">Cable E-Series hardware</a></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-5-configure-hosts">Step 5: Configure hosts</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png" alt="Five"></span> Configure hosts</div>
 <p>To make storage available to a host, select a guide for the host&#8217;s operating system type:</p>
 </div>
-<div class="ulist">
+<div class="ulist quick-margin-list">
 <ul>
 <li>
 <p><a href="../config-linux/index.html">Linux express configuration</a></p>
@@ -6555,18 +6539,14 @@
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="step-6-configure-storage">Step 6: Configure storage</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png" alt="Six"></span> Configure storage</div>
 <p>To configure storage, you can access the web-based interface, System Manager, by pointing a browser to the controller&#8217;s IP address. A setup wizard helps you get started with system configuration. As an alternative, you can also use the command line interface (CLI).</p>
 </div>
-<div class="paragraph">
+<div class="paragraph quick-margin-para">
 <p>Select the interface you want to use:</p>
 </div>
-<div class="ulist">
+<div class="ulist quick-margin-list">
 <ul>
 <li>
 <p><a href="https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html">SANtricity System Manager Help for 11.7x</a></p>
@@ -6575,8 +6555,6 @@
 <p><a href="https://docs.netapp.com/us-en/e-series-santricity-116/index.html">SANtricity System Manager Help for 11.6x</a></p>
 </li>
 </ul>
-</div>
-</div>
 </div>
 
     </article>
@@ -6628,7 +6606,7 @@
                 <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                   <title>blog@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/us-en/e-series/common/svg/sprite.svg#blog"></use>
+                    xlink:href="/us-en/e-series/images/sprite.svg#blog"></use>
                 </svg>
               </a>
             </li>
@@ -6639,7 +6617,7 @@
                 <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
                   <title>community@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/us-en/e-series/common/svg/sprite.svg#comments"></use>
+                    xlink:href="/us-en/e-series/images/sprite.svg#comments"></use>
                 </svg>
               </a>
             </li>
@@ -6650,7 +6628,7 @@
                 <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                   <title>twitter@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/us-en/e-series/common/svg/sprite.svg#twitter"></use>
+                    xlink:href="/us-en/e-series/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
@@ -6661,7 +6639,7 @@
                 <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
                   <title>facebook@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/us-en/e-series/common/svg/sprite.svg#facebook"></use>
+                    xlink:href="/us-en/e-series/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
@@ -6672,7 +6650,7 @@
                 <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
                   <title>linkedin@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/us-en/e-series/common/svg/sprite.svg#linkedin"></use>
+                    xlink:href="/us-en/e-series/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -6683,7 +6661,7 @@
                 <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                   <title>youtube@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/us-en/e-series/common/svg/sprite.svg#youtube"></use>
+                    xlink:href="/us-en/e-series/images/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -6694,7 +6672,7 @@
                 <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
                   <title>slideshare@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/us-en/e-series/common/svg/sprite.svg#slideshare"></use>
+                    xlink:href="/us-en/e-series/images/sprite.svg#slideshare"></use>
                 </svg>
               </a>
             </li>
@@ -6718,7 +6696,6 @@
       cookieLaw.euCountry = "US";
       cookieLaw.invoke = function(){return false;}
     </script>
-    <script src='/us-en/e-series/js/www-ntap.js'></script>
     <script src='/us-en/e-series/js/tabbed-blocks.js'></script>
     <script src='/us-en/e-series/js/sidebar.js'></script>
   </body></html>
